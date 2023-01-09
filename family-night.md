@@ -1,32 +1,51 @@
-## Family Night
-With your requirements and situation, these are the cars that we would recommend!
+<meta name="generator" content="Jekyll v3.9.2" />
+<meta property="og:title" content="Create Task" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/family-night.html" />
+<meta property="og:url" content="http://localhost:4000/family-night.html" />
+<meta property="og:site_name" content="Shreya, Sarah, Vivian, Giannina Project" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Create Task" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Create Performance Task","headline":"Create Task","url":"http://localhost:4000/family-night.html"}</script>
 
-### Cars
+    <link rel="stylesheet" href="/assets/css/homesite.css?">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="/assets/js/respond.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+ 
+<meta name="theme-color" content="#353535">
+<meta name="msapplication-navbutton-color" content="#353535">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+ 
 
-<div class="row"> <!--- make a new row -->
-  <!-- each column is one-third of width -->
-  <div class="column">
-    <img src="/images/caroutput_bmw_3_series_sedan.jpeg" alt="Car 1" style="width:100%">
-  </div>
-   <div class="column">
-    <img src="/images/caroutput_honda_insight.jpg" alt="Car 2" style="width:100%">
-  </div>
-  </div>
-   <div class="column">
-    <img src="/images/caroutput_subaru_crosstek.jpeg" alt="Car 3" style="width:100%">
-  </div>
-  </div>
-   <div class="column">
-    <img src="/images/caroutput_subaru_impreza.jpeg" alt="Car 4" style="width:100%">
-  </div>
-   <div class="column">
-    <img src="/images/caroutput_kia_niro.jpeg" alt="Car 5" style="width:100%">
-  </div>
-</div>
+<!DOCTYPE html>
 
-### Car Info
-1. BMW 3 Series
-2. Honda Insight
-3. Subaru Crosstek
-4. Subaru Impreza
-5. Kia Niro
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SSVG Co.</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="homesite.css">
+  </head>
+  <body>
+    <header>
+
+    <button class="logo">SSVG</button>
+      <nav> 
+       <ul class="nav_links">
+          <li> <a href="#">Home</a></li>
+          <li> <a href="#">Catalog</a></li>
+          <li> <a href="#">Team</a></li>
+          <li> <a href="#">About</a></li>
+        </ul>
+      </nav> 
+      <a class="cta" href="#"><button>Contact</button></a>
+    </header>
+    
+    <script src="" async defer></script>
+  </body>
+</html>
