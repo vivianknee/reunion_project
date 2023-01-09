@@ -7,13 +7,12 @@
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Create Task" />
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"Create Performance Task","headline":"Create Task","url":"http://localhost:4000/family-night.html"}</script>
+<script type="application/ld+json"> {"@context":"https://schema.org","@type":"WebPage","description":"Create Performance Task","headline":"Create Task","url":"http://localhost:4000/family-night.html"}</script>
 
-    <link rel="stylesheet" href="/assets/css/homesite.css?">
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-    <script src="/assets/js/respond.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <link rel="stylesheet" href="/assets/css/homesite.scss?">
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <script src="/assets/js/respond.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
  
 <meta name="theme-color" content="#353535">
 <meta name="msapplication-navbutton-color" content="#353535">
@@ -44,7 +43,7 @@
           <li> <a href="#">About</a></li>
         </ul>
       </nav> 
-      <a class="cta" href="#"><button>Contact</button></a>
+        <a class="cta" href="#"><button>Contact</button></a>
     </header>
     
   <script src="" async defer></script>
