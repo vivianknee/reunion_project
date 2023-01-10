@@ -4,19 +4,19 @@
   <!-- Full-width images with number and caption text -->
   <div class="mySlides fade">
     <div class="numbertext">1 / 3</div>
-    <img src="carslide1.jpg" style="width:100%">
+    <img src="/images/carslide1.jpg" style="width:100%">
     <div class="text">Caption Text</div>
   </div>
 
   <div class="mySlides fade">
     <div class="numbertext">2 / 3</div>
-    <img src="carslide2.jpg" style="width:100%">
+    <img src="/images/carslide2.jpg" style="width:100%">
     <div class="text">Caption Two</div>
   </div>
 
   <div class="mySlides fade">
     <div class="numbertext">3 / 3</div>
-    <img src="carslide3.jpg" style="width:100%">
+    <img src="/images/carslide3.jpg" style="width:100%">
     <div class="text">Caption Three</div>
   </div>
 

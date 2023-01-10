@@ -1,6 +1,5 @@
 
 <link rel="stylesheet" href="homesite.scss">
-<!DOCTYPE html>
 
 <html>
   <head>
