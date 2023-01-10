@@ -1,4 +1,7 @@
 <style>
+  
+  @import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
   * {
     box-sizing: border-box;
     margin: 0;
