@@ -70,7 +70,6 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
@@ -87,7 +86,7 @@
           <li> <a href="#">About</a></li>
         </ul>
       </nav> 
-        <a class="cta" href="#"><button>Contact</button></a>
+        <a href="#"><button>Contact</button></a>
     </header>
 
   </body>
