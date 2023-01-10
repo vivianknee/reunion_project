@@ -75,10 +75,11 @@
   <button class="logo">SSVG</button>
       <nav> 
        <ul class="nav_links">
-          <li> <a href="#">Home</a></li>
-          <li> <a href="#">Catalog</a></li>
-          <li> <a href="#">Team</a></li>
-          <li> <a href="#">About</a></li>
+          <li> <a href="/home">Home</a></li>
+          <li> <a href="/catalog">Catalog</a></li>
+          <li> <a href="/activities">Search Inventory</a></li>
+          <li> <a href="/finance">Finance</a></li>
+          <li> <a href="/owners">Account</a></li>
         </ul>
       </nav> 
         <a href="#"><button>Contact</button></a>
