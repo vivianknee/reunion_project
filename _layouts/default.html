@@ -14,7 +14,6 @@
     <script src="{{ '/assets/js/respond.js' | relative_url }}"></script>
    
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    {% include head-custom.html %}
 
   </head>
   <body>
@@ -24,9 +23,6 @@
       <section>
         <!-- nighthawk coding society has altered arrangement and inserted navigation that is updated in independent file -->
         <div id="title">
-          <h1><a href={{ site.gitorg }}>{{ site.title | default: site.github.repository_name }}</a></h1>
-          <p>{{ site.description | default: site.github.project_tagline }}</p>
-          <hr>
           {% include home.html %}
         </div>
 
