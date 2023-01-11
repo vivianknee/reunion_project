@@ -77,7 +77,7 @@
        <ul class="nav_links">
           <li> <a href="/home">Home</a></li>
           <li> <a href="/catalog">Catalog</a></li>
-          <li> <a href="/activities">Search Inventory</a></li>
+          <li> <a href="/sample-questions">Find Your Car</a></li>
           <li> <a href="/finance">Finance</a></li>
           <li> <a href="/owners">Account</a></li>
         </ul>
