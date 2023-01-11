@@ -3,23 +3,28 @@
 
   <!-- Full-width images with number and caption text -->
   <div class="mySlides fade">
-    <div class="numbertext">1 / 4</div>
+    <div class="numbertext">1 / 5</div>
     <img src="carslide1.jpg" style="width:100%">
   </div>
 
   <div class="mySlides fade">
-    <div class="numbertext">2 / 4</div>
+    <div class="numbertext">2 / 5</div>
     <img src="carslide2.jpg" style="width:100%">
   </div>
 
   <div class="mySlides fade">
-    <div class="numbertext">3 / 4</div>
+    <div class="numbertext">3 / 5</div>
     <img src="carslide3.jpg" style="width:100%">
   </div>
 
   <div class="mySlides fade">
-    <div class="numbertext">4 / 4</div>
+    <div class="numbertext">4 / 5</div>
     <img src="carouput_bmw_3_series_sedan.jpeg" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">5 / 5</div>
+    <img src="caroutout_honda_insight.jpg" style="width:100%">
   </div>
 
   <!-- Next and previous buttons -->
