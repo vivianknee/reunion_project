@@ -41,7 +41,6 @@
     const resultContainer = document.getElementById("result");
 
     btnSearch.addEventListener('click', (event) => {
-          alert("Hi");
           var car_list = [
             { brand: "toyota", color: "white", is_new: "True", year: 2000, type: "van"},
             { brand: "honda", color: "red", is_new: "False", year: 1995, type: "suv"},
