@@ -62,7 +62,7 @@
               tr.appendChild(status);
               resultContainer.appendChild(tr);
           }
-    }
+    })
 
   </script>
 
