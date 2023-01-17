@@ -58,8 +58,7 @@
               tr.appendChild(isnew_ele);
               tr.appendChild(year_ele);
               tr.appendChild(type_ele);
-
-              tr.appendChild(status);
+              
               resultContainer.appendChild(tr);
           }
     })
