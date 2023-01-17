@@ -1,4 +1,20 @@
 <!-- Slideshow container -->
+<style>
+  button {
+        padding: 9px 25px;
+        border: 2px solid black;
+        background-color: white;
+        color: black;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+    }
+  
+    button:hover {
+        background-color: turquoise;
+    }
+</style>
+
 <html>
         <header>
             <div class="">
@@ -58,7 +74,7 @@
               tr.appendChild(isnew_ele);
               tr.appendChild(year_ele);
               tr.appendChild(type_ele);
-              
+
               resultContainer.appendChild(tr);
           }
     })
