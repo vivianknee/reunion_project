@@ -11,7 +11,7 @@
     const btnSearch = document.getElementById("search_button");
 
     btnSearch.addEventListener('click', (event) => {
-       
+          alert("Hi")
         }
   </script>
 
