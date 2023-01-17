@@ -1,4 +1,43 @@
 <!-- Slideshow container -->
+<html>
+        <header>
+            <div class="">
+                <button id="search_button">Search</button>
+            </div>
+        </header>
+  </html>
+
+<script>
+    const btnSearch = document.getElementById("search_button");
+
+    btnSearch.addEventListener('click', (event) => {
+       
+        }
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="slideshow-container">
 
   <!-- Full-width images with number and caption text -->
