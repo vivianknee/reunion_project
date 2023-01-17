@@ -27,9 +27,9 @@
     btnSearch.addEventListener('click', (event) => {
           alert("Hi");
           var car_list = [
-            { brand: "toyota", color: "white", is_new: True, year: 2000, type: "van"},
-            { brand: "honda", color: "red", is_new: False, year: 1995, type: "suv"},
-            { brand: "ferrari", color: "black", is_new: True, year: 2015, type: "sports car"},
+            { brand: "toyota", color: "white", is_new: "True", year: 2000, type: "van"},
+            { brand: "honda", color: "red", is_new: "False", year: 1995, type: "suv"},
+            { brand: "ferrari", color: "black", is_new: "True", year: 2015, type: "sports car"},
           ]
 
           for (const car of car_list){
@@ -44,7 +44,7 @@
               color_ele.innerHTML = car.color;
 
               const isnew_ele = document.createElement("td");
-              isnew_ele.innerHTML = car.isnew.toString();
+              isnew_ele.innerHTML = car.isnew;
 
               const year_ele = document.createElement("td");
               year_ele.innerHTML = car.year.toString();
