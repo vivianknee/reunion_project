@@ -22,7 +22,7 @@
 
 <html>
         <header>
-            <div class="">
+            <div class="boxes">
                 <button id="search_button">Search</button>
                 <table class="table-latitude">
                 <thead>
