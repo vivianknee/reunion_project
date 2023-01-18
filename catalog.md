@@ -18,6 +18,10 @@
     color: white;
     }
 
+    .boxes {
+  white-space: nowrap;
+    }
+
 </style>
 
 <html>
