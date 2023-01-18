@@ -1,0 +1,125 @@
+<style>
+    #login {
+        display: none;
+        color: white;
+        width: 60%;
+        height: 75%;
+        padding: 50px;
+        padding-top: 15px;
+        background-color: #black;
+        position: fixed;
+        left: 50%;
+        top: 7%;
+        transform: translate(-50%, 5%);
+        border: 3px solid #999999;
+        z-index: 9;
+    }
+    label {
+        color: white;
+        font-size: 75%;
+    }
+    .cancel {
+        background-color: #ffffff00;
+        position: fixed;
+        top: 15px;
+        right: 20px;
+        border: none;
+        font-weight: bold;
+    }
+    button {
+        background-color: rgb(5, 0, 0);
+    }
+</style>
+<body>
+<form onsubmit="create_User()" id="login">
+    <h1><label>Create an account to save your history</label></h1>
+    <br>
+    <p><label>
+        Name:
+        <input type="text" name="name" id="name" required>
+    </label></p>
+    <p><label>
+        Password:
+        <input type="password" name="password" id="password" required>
+    </label></p>
+    <p><label>
+        Verify Password:
+        <input type="password" name="passwordV" id="passwordV" required>
+    </label></p>
+    <p><label>
+        Email:
+        <input type="email" name="email" id="email" required>
+    </label></p>
+    <br>
+    <p>
+        <button>Create</button>
+    </p>
+    <button type="button" class="cancel" onclick="closeForm()">x</button>
+</form>
+</body>
+<script>
+    function openForm() {
+        document.getElementById("login").style.display = "block";
+    }
+    function closeForm() {
+        document.getElementById("login").style.display = "none";
+    }
+    window.onclick = function (event) {
+        let modal = document.getElementById('loginPopup');
+        if (event.target == modal) {
+    closeForm();
+        }
+    }
+    function create_User(){
+        // extract data from inputs
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+        const requestOptions = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer my-token',
+            },
+        };
+        //url for Create API
+        const url='/crud_api/create/' + name + '/' + email+ '/' + password + '/' + phone;
+        //Async fetch API call to the database to create a new user
+        fetch(url, requestOptions).then(response => {
+            // prepare HTML search result container for new output
+            const resultContainer = document.getElementById("result");
+            // trap error response from Web API
+            if (response.status !== 200) {
+                const errorMsg = 'Database response error: ' + response.status;
+                console.log(errorMsg);
+                // Email must be unique, no duplicates allowed
+                document.getElementById("pswError").innerHTML =
+                    "Email already exists in the table";
+                return;
+            }
+            // response contains valid result
+            response.json().then(data => {
+                console.log(data);
+                //add a table row for the new/created userId
+                const tr = document.createElement("tr");
+                for (let key in data) {
+                    if (key !== 'query') {
+                        //create a DOM element for the data(cells) in table rows
+                        const td = document.createElement("td");
+                        console.log(data[key]);
+                        //truncate the displayed password to length 20
+                        if (key === 'password'){
+                            td.innerHTML = data[key].substring(0,17)+"...";
+                        }
+                        else{
+                            td.innerHTML = data[key];}
+                        //add the DOM data element to the row
+                        tr.appendChild(td);
+                    }
+                }
+                //append the DOM row to the table
+                table.appendChild(tr);
+            })
+        })
+    }
+</script>
