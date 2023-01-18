@@ -23,14 +23,36 @@
       <section>
         <!-- nighthawk coding society has altered arrangement and inserted navigation that is updated in independent file -->
         <div id="title">
+          {% include account.html %}
+          <button action="javascript:" onclick="openForm()" style="color: black; border: none; background-color: clear; position: fixed; top:5.5%; right:7%; font-size: 16px;">
+            Sign In
+          </button>
+        </div>
+        <div class="boxes">
           {% include home.html %}
         </div>
-
+        <div class="boxes">
         <!-- this is Jekyll magic, each md file in site will be inserted here -->
         {{ content }}
-
+        </div>
       </section>
 
     </div>
   </body>
 </html>
+
+<style>
+  a, button {
+        font-family: "Kanit", sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        color:black;
+        text-decoration: none;
+        background-color: rgba(70, 77, 96, 0.5);
+        color: #fff;
+    }
+    
+ .boxes {
+        white-space: nowrap;
+    }
+</style>
