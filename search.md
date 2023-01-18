@@ -1,6 +1,3 @@
-## Family Night
-With your requirements and situation, these are the cars that we would recommend!
-
 ### Cars
 
 <div class="row"> <!--- make a new row -->

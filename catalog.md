@@ -13,6 +13,11 @@
     button:hover {
         background-color: turquoise;
     }
+
+    a {
+    color: white;
+    }
+
 </style>
 
 <html>

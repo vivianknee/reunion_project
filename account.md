@@ -1,6 +1,10 @@
 
 <style>
-     
+     <style>
+     a {
+    color: white;
+    }
+</style>
     
 </style>
 

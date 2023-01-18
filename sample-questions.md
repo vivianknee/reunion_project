@@ -1,3 +1,8 @@
+<style>
+     a {
+    color: white;
+    }
+</style>
 ## Sample Questions
 > These are some of the questions that users will be prompted to answer. They will help the program narrow down the cars that are a best fit for them.
 
