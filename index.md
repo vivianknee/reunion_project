@@ -15,7 +15,8 @@
     
 <header>
     <body>
-        <div class="slideshow-container">
+    </body>
+<div class="slideshow-container">
          <!-- Full-width images with number and caption text -->
         <div class="mySlides fade">
             <div class="numbertext">1 / 3</div>
@@ -43,8 +44,6 @@
         <span class="dot" onclick="currentSlide(2)"></span>
         <span class="dot" onclick="currentSlide(3)"></span>
         </div>
-    </body>
-
 </header>
 
 </html>
