@@ -15,11 +15,11 @@
     }
 
     a {
-    color: white;
+        color: white;
     }
 
     .boxes {
-  white-space: nowrap;
+        white-space: nowrap;
     }
 
 </style>
