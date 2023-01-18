@@ -1,4 +1,9 @@
 ## Meet the Team!
+<style>
+     a {
+    color: white;
+    }
+</style>
 
 <table>
     <tr>
