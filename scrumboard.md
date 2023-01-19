@@ -9,7 +9,7 @@
     <table>
         <tr>
         <th>Group Member</th>
-        <th>Scrum Role</th>
+        <th>Scrum Roll</th>
         <th>About</th>
         </tr>
         <tr>
