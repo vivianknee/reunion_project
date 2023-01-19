@@ -1,4 +1,26 @@
-<!-- Slideshow container -->
+# Car Catalog
+> find your ideal car by using the filters provided below
+<html>
+        <header>
+            <div class="boxes">
+                <button id="search_button">Search</button>
+                <table class="table-latitude">
+                <thead>
+                    <tr>
+                        <th>Brand</th>
+                        <th>Color</th>
+                        <th>New?</th>
+                        <th>Year</th>
+                        <th>Type</th>
+                    </tr>
+                    </thead>
+                     <tbody id="result">
+                    </tbody>
+            </table>
+            </div>
+        </header>
+  </html>
+
 <style>
   button {
         padding: 9px 25px;
@@ -24,26 +46,6 @@
 
 </style>
 
-<html>
-        <header>
-            <div class="boxes">
-                <button id="search_button">Search</button>
-                <table class="table-latitude">
-                <thead>
-                    <tr>
-                        <th>Brand</th>
-                        <th>Color</th>
-                        <th>New?</th>
-                        <th>Year</th>
-                        <th>Type</th>
-                    </tr>
-                    </thead>
-                     <tbody id="result">
-                    </tbody>
-            </table>
-            </div>
-        </header>
-  </html>
 
 <script>
     const btnSearch = document.getElementById("search_button");
