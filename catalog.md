@@ -1,7 +1,8 @@
-# Car Catalog
-> find your ideal car by using the filters provided below
 <html>
+    <h1> Car Catalog </h1>
+>   <p>find your ideal car by using the filters provided below</p>
         <header>
+        </header>
             <div class="boxes">
                 <button id="search_button">Search</button>
                 <table class="table-latitude">
@@ -18,7 +19,6 @@
                     </tbody>
             </table>
             </div>
-        </header>
   </html>
 
 <style>
