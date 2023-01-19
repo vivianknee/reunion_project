@@ -34,27 +34,6 @@
     header:hover {
         color:white;
     }
-  
-    .logo {
-        cursor: pointer;
-    }
-  
-    .nav_links {
-        list-style: none;
-    }
-  
-    .nav_links li {
-        display: inline-block;
-        padding: 0px 20px;
-    }
-  
-    .nav_links li a {
-        transition: all 0.3s ease 0s;
-    }
-  
-    .nav_links li a:hover {
-        color:white;
-    }
 
     .sign {
         font-family: "Kanit", sans-serif;
@@ -66,9 +45,35 @@
         position: fixed; 
         top:5.5%; 
         right:7%; 
-        font-size: 16px;"
+        font-size: 16px;
     }
   
+    ul {
+        font-family: "Kanit", sans-serif;
+        font-weight: 500;
+        font-size: 16px;"
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+    }
+
+    li {
+        float: left;
+    }
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    li a:hover {
+        background-color: #111;
+    }
   </style>
 
   <html>
@@ -78,7 +83,11 @@
                 {% include account.html %}
                 <nav>
                     <ul>
-                        <li> <a href="/home">Home</a> &nbsp;&nbsp; <a href="/catalog">Catalog</a> &nbsp;&nbsp; <a href="/sample-questions">Car Search Tool</a> &nbsp;&nbsp; <a href="/scrumboard">About Us</a> &nbsp;&nbsp; <a class="sign" action="javascript:" onclick="openForm()" href="/account">Sign In</a> </li>
+                        <li> <a href="/home">Home</a><li> 
+                        <li> <a href="/catalog">Catalog</a><li> 
+                        <li> <a href="/sample-questions">Car Search Tool</a><li> 
+                        <li> <a href="/scrumboard">About Us</a><li> 
+                        <li> <a class="sign" action="javascript:" onclick="openForm()" href="/account">Sign In</a> </li>
                     </ul>
                 </nav>
 
