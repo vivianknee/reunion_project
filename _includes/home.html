@@ -55,6 +55,19 @@
     .nav_links li a:hover {
         color:white;
     }
+
+    .sign {
+        font-family: "Kanit", sans-serif;
+        font-weight: 500;
+        color:black;
+        text-decoration: none;
+        background-color: none;
+        border: none;
+        position: fixed; 
+        top:5.5%; 
+        right:7%; 
+        font-size: 16px;"
+    }
   
   </style>
 
@@ -62,10 +75,10 @@
     
         <header>
             <div class="header">
-
+                {% include account.html %}
                 <nav>
                     <ul>
-                        <li> <a href="/home">Home</a> &nbsp;&nbsp; <a href="/catalog">Catalog</a> &nbsp;&nbsp; <a href="/sample-questions">Car Search Tool</a> &nbsp;&nbsp; <a href="/account">Account</a> &nbsp;&nbsp; <a href="/scrumboard">About Us</a> </li>
+                        <li> <a href="/home">Home</a> &nbsp;&nbsp; <a href="/catalog">Catalog</a> &nbsp;&nbsp; <a href="/sample-questions">Car Search Tool</a> &nbsp;&nbsp; <a href="/scrumboard">About Us</a> &nbsp;&nbsp; <a class="sign" action="javascript:" onclick="openForm()" href="/account">Sign In</a> </li>
                     </ul>
                 </nav>
 
