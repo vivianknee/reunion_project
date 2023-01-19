@@ -14,7 +14,7 @@
     <script src="{{ '/assets/js/respond.js' | relative_url }}"></script>
    
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
+  
   </head>
   <body>
       
@@ -23,16 +23,12 @@
       <section>
         <!-- nighthawk coding society has altered arrangement and inserted navigation that is updated in independent file -->
         <div id="title">
-          {% include account.html %}
-          <button action="javascript:" onclick="openForm()">
-            Sign In
-          </button>
-        </div>
-        <div class="boxes">
           {% include home.html %}
-        <!-- this is Jekyll magic, each md file in site will be inserted here -->
-          {{ content }}
         </div>
+
+        <!-- this is Jekyll magic, each md file in site will be inserted here -->
+        {{ content }}
+
       </section>
 
     </div>
@@ -40,20 +36,5 @@
 </html>
 
 <style>
-  button {
-        font-family: "Kanit", sans-serif;
-        font-weight: 500;
-        color:black;
-        text-decoration: none;
-        background-color: none;
-        border: none;
-        position: fixed; 
-        top:5.5%; 
-        right:7%; 
-        font-size: 16px;"
-    }
-    
- .boxes {
-        white-space: nowrap;
-    }
+ 
 </style>
