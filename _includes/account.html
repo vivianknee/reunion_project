@@ -1,22 +1,27 @@
 <style>
+	@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
     #login {
         display: none;
         color: white;
-        width: 60%;
-        height: 75%;
+        width: 45%;
+        height: 45%;
         padding: 50px;
         padding-top: 15px;
         background-color: rgb(16, 15, 15);
         position: fixed;
         left: 50%;
         top: 7%;
-        transform: translate(-50%, 5%);
+        transform: translate(-50%, 25%);
         border: 3px solid white;
         z-index: 9;
     }
     label {
         color: white;
-        font-size: 75%;
+        font-family: "Kanit", sans-serif;
+        font-size: 20px;
+        display: grid;
+		justify-content: center;
+        
     }
     .cancel {
         background-color: white;
@@ -26,13 +31,32 @@
         border: none;
         font-weight: bold;
     }
+
+    .createbutton {
+        background-color: white;
+        border-radius: 8px;
+        color: black;
+        border: none;
+        margin: 0;
+        position: absolute;
+        left: 50%;
+     	transform: translate(-50%, -50%);
+        font-family: "Kanit", sans-serif;
+        font-size: 20px;
+
+    }
+
+    .createbutton:hover {
+        background-color: rgb(4, 4, 43);
+        color:white;
+    }
     
 </style>
 
 <body>
 <form onsubmit="create_User()" id="login">
     <h1><label>Create an account to save your car history</label></h1>
-    <br>
+    
     <p><label>
         Name:
         <input type="text" name="name" id="name" required>
@@ -49,13 +73,14 @@
         Email:
         <input type="email" name="email" id="email" required>
     </label></p>
-    <br>
+    <br><br>
     <p>
-        <button>Create</button>
+        <button class="createbutton">Create</button>
     </p>
     <button type="button" class="cancel" onclick="closeForm()">x</button>
 </form>
 </body>
+
 <script>
     function openForm() {
         document.getElementById("login").style.display = "block";

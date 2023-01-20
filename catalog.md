@@ -1,9 +1,9 @@
 <html>
     <h1> Car Catalog </h1>
->   <p>find your ideal car by using the filters provided below</p>
+       <p>find your ideal car by using the filters provided below</p>
         <header>
         </header>
-            <div class="boxes">
+            <div>
                 <button id="search_button">Search</button>
                 <table class="table-latitude">
                 <thead>
