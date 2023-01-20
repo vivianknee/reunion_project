@@ -1,5 +1,5 @@
-## Sample Questions
-> These are some of the questions that users will be prompted to answer. They will help the program narrow down the cars that are a best fit for them.
+<h1> Sample Questions </h1>
+<p>These are some of the questions that users will be prompted to answer. They will help the program narrow down the cars that are a best fit for them</p>
 
 
 <html>
@@ -100,7 +100,7 @@
 
     label {
         font-family: "Kanit", sans-serif;
-        font-size: 20px;
+        font-size: 18px;
         color: white;
     }
 
