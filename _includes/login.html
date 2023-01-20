@@ -4,6 +4,8 @@
         font-family: "Kanit", sans-serif;
         font-size: 20px;
         color: white;
+        display: grid;
+		justify-content: center;
     }
 
     #login {
@@ -22,7 +24,7 @@
         border-radius: 8px;
         z-index: 9;
     }
-    .sign-in-label {
+    .log-in-label {
         color: white;
         font-family: "Kanit", sans-serif;
         font-size: 20px;
@@ -65,17 +67,17 @@
 
 <body>
 <form onsubmit="create_User()" id="login">
-    <h3><label class="title">Login to see your car history</label></h3>
+    <h3><label class="title">Login</label></h3>
     
-    <p><label class="sign-in-label">
+    <p><label class="log-in-label">
         Username:
         <input type="text" name="username" id="username" required>
     </label></p>
-    <p><label class="sign-in-label">
+    <p><label class="log-in-label">
         Password:
         <input type="password" name="password" id="password" required>
     </label></p>
-    <p><label class="sign-in-label">
+    <p><label class="log-in-label">
         Email:
         <input type="email" name="email" id="email" required>
     </label></p>
@@ -113,12 +115,12 @@
             },
         };
         //url for Create API
-        const url='/crud_api/create/' + username + '/' + email+ '/' + password;
+        const url='/api/create/' + username + '/' + email+ '/' + password;
         //Async fetch API call to the database to create a new user
         fetch(url, requestOptions).then(response => {
             // prepare HTML search result container for new output
             const resultContainer = document.getElementById("result");
-            // trap error response from Web API
+            // get error
             if (response.status !== 200) {
                 const errorMsg = 'Database response error: ' + response.status;
                 console.log(errorMsg);
@@ -130,7 +132,7 @@
             // response contains valid result
             response.json().then(data => {
                 console.log(data);
-                //add a table row for the new/created userId
+                //add a table row for the created user
                 const tr = document.createElement("tr");
                 for (let key in data) {
                     if (key !== 'query') {
