@@ -22,26 +22,23 @@
   </html>
 
 <style>
-  button {
-        padding: 9px 25px;
-        border: 2px solid black;
+    .searchbutton {
         background-color: white;
+        border-radius: 8px;
         color: black;
-        border-radius: 12px;
-        cursor: pointer;
-        transition: all 0.3s ease 0s;
+        border: none;
+        margin: 0;
+        font-family: "Kanit", sans-serif;
+        font-size: 20px;
+
     }
-  
-    button:hover {
-        background-color: turquoise;
+
+    .searchbutton:hover {
+        color: rgb(4, 4, 43);
     }
 
     a {
         color: white;
-    }
-
-    .boxes {
-        white-space: nowrap;
     }
 
 </style>
