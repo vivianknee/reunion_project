@@ -41,23 +41,23 @@
         border-bottom: 1px solid ;
     }
 
-    #header {
-        background-color: white;
-        color: black;
-    }
-
     @media only screen and (max-width: 768px) {
         table {
             width 90%
         }
     }
+
+    .background {
+    	background-color: blue;
+     }
+
 </style>
 
 <html>
     <h1>Meet the Team!</h1>
     <body>
         <table>
-            <tr>
+            <tr class="background">
                 <th>Group Member</th>
                 <th>Scrum Roll</th>
                 <th>About</th>
