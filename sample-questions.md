@@ -110,4 +110,15 @@
         color: white;
     }
 
+    h1 {
+        font-family: "Kanit", sans-serif;
+        font-size: 30px;
+        color: white;
+    }
+
+    p {
+        font-family: "Kanit", sans-serif;
+        font-size: 15px;
+        color: white;
+    }
 </style>
