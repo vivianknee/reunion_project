@@ -3,7 +3,7 @@
   
     @import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
     
-    header {
+    .menu {
         overflow: visible;
         background-color: black;
         border: none;
@@ -11,11 +11,11 @@
         top: 0;
         width: 100%;
         font-family: "Kanit", sans-serif;
-        font-size: 200%;
+        font-size: 20px;
         z-index: 999;
     }
 
-    header:hover {
+    .menu:hover {
         color:white;
     }
   
@@ -26,7 +26,7 @@
         text-align: center;
         padding: 14px 16px;
         font-family: "Kanit", sans-serif;
-        font-size: 100%;
+        font-size: 20px%;
     }
 
     .nav:hover {
@@ -35,7 +35,7 @@
 
 </style>
 
-  <html class="menu">
+  <p class="menu">
     {% include account.html %}     
      <table class="menu">
             <tr>
@@ -47,5 +47,5 @@
                 <td style="float:right"> <a action="javascript:" onclick="openForm()" class="nav">Sign In</a></td>
             </tr>
     </table>
-</html>
+</p>
 
