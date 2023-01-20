@@ -38,7 +38,8 @@
 </style>
 
   <p class="menu">
-    {% include account.html %}     
+    {% include signin.html %}  
+    {% include login.html %}     
      <table class="menu">
             <tr>
                 <td><a href="."><img src="{{site.baseurl}}/images/logo.png" width="120px"></a></td> 
@@ -46,7 +47,8 @@
                 <td><a href="/catalog" class="nav">Catalog</a></td>
                 <td><a href="/sample-questions" class="nav">Car Search Tool</a></td>
                 <td><a href="/scrumboard" class="nav">About Us</a></td>
-                <td><a action="javascript:" onclick="openForm()" class="nav">Sign In</a></td>
+                <td><a action="javascript:" onclick="openSign()" class="nav">Sign In</a></td>
+                <td><a action="javascript:" onclick="openLog()" class="nav">Log In</a></td>
             </tr>
     </table>
 </p>

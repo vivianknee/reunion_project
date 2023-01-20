@@ -65,19 +65,15 @@
 
 <body>
 <form onsubmit="create_User()" id="login">
-    <h3><label class="title">Create an account to save your car history</label></h3>
+    <h3><label class="title">Login to see your car history</label></h3>
     
     <p><label class="sign-in-label">
-        Name:
-        <input type="text" name="name" id="name" required>
+        Username:
+        <input type="text" name="username" id="username" required>
     </label></p>
     <p><label class="sign-in-label">
         Password:
         <input type="password" name="password" id="password" required>
-    </label></p>
-    <p><label class="sign-in-label">
-        Verify Password:
-        <input type="password" name="passwordV" id="passwordV" required>
     </label></p>
     <p><label class="sign-in-label">
         Email:
@@ -85,28 +81,28 @@
     </label></p>
     <br><br>
     <p>
-        <button class="createbutton">Create</button>
+        <button class="createbutton">Login</button>
     </p>
-    <button type="button" class="cancel" onclick="closeForm()">x</button>
+    <button type="button" class="cancel" onclick="closeLog()">x</button>
 </form>
 </body>
 
 <script>
-    function openForm() {
+    function openLog() {
         document.getElementById("login").style.display = "block";
     }
-    function closeForm() {
+    function closeLog() {
         document.getElementById("login").style.display = "none";
     }
     window.onclick = function (event) {
         let modal = document.getElementById('loginPopup');
         if (event.target == modal) {
-    closeForm();
+    closeLog();
         }
     }
     function create_User(){
         // extract data from inputs
-        const name = document.getElementById("name").value;
+        const username = document.getElementById("Username").value;
         const email = document.getElementById("email").value;
         const password = document.getElementById("password").value;
         const requestOptions = {
@@ -117,7 +113,7 @@
             },
         };
         //url for Create API
-        const url='/crud_api/create/' + name + '/' + email+ '/' + password + '/' + phone;
+        const url='/crud_api/create/' + username + '/' + email+ '/' + password;
         //Async fetch API call to the database to create a new user
         fetch(url, requestOptions).then(response => {
             // prepare HTML search result container for new output
@@ -126,9 +122,9 @@
             if (response.status !== 200) {
                 const errorMsg = 'Database response error: ' + response.status;
                 console.log(errorMsg);
-                // Email must be unique, no duplicates allowed
+
                 document.getElementById("pswError").innerHTML =
-                    "Email already exists in the table";
+                    "Account found, logging you in";
                 return;
             }
             // response contains valid result
