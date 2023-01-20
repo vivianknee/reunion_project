@@ -22,80 +22,49 @@
     }
   
     header {
+        font-family: "Kanit", sans-serif;
         align-items: center;
-        padding: 8px;
-        margin: 0px 0px 50px;
         border: none;
         position: fixed; 
-        top:5.5%; 
+        top: 0%; 
+        width: 100%;
+        background-color: black;
         font-size: 20px;
+        z-index: 999;
+        overflow: visible:
     }
 
     header:hover {
         color:white;
     }
-
-    .sign {
-        font-family: "Kanit", sans-serif;
-        font-weight: 500;
-        position: fixed; 
-        top:5.5%; 
-        right:7%; 
-        font-size: 16px;
-        list-style-type: none;
-        overflow: hidden;
-        background-color: #333;
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-    }
   
-    ul {
+    .nav {
         font-family: "Kanit", sans-serif;
         font-weight: 500;
-        font-size: 16px;"
-        list-style-type: none;
+        font-size: 20px;"
+        text-align: center;
+        
+        display: block;
+        color: rgb(249, 238, 238);
         margin: 0;
         padding: 0;
         overflow: hidden;
         background-color: #333;
     }
-
-    li {
-        float: left;
-    }
-
-    li a {
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-    }
-
-    li a:hover {
-        background-color: #111;
-    }
   </style>
 
-  <html>
-    
-        <header>
-            <div class="header">
-                {% include account.html %}
-                <nav>
-                    <ul>
-                        <li> <a href="/home">Home</a><li> 
-                        <li> <a href="/catalog">Catalog</a><li> 
-                        <li> <a href="/sample-questions">Car Search Tool</a><li> 
-                        <li> <a href="/scrumboard">About Us</a><li> 
-                        <li class="sign"> <a action="javascript:" onclick="openForm()" href="/account">Sign In</a> </li>
-                    </ul>
-                </nav>
-
-            </div>
-        </header>
+  <html class="header">
+    {% include account.html %}     
+     <table class="header">
+            <tr>
+                <td><a href="."><img src="{{site.baseurl}}/images/Studio_Project.png" width="150px"></a></td><!--ABOUT US IN HERE-->
+                <td><a href="/home" class="nav">Home</a></td>
+                <td><a href="/catalog" class="nav">Catalog</a></td>
+                <td><a href="/sample-questions" class="nav">Car Search Tool</a></td>
+                <td><a href="/scrumboard" class="nav">About Us</a></td>
+                <td style="float:right"> <a action="javascript:" onclick="openForm()" class="nav">Sign In</a></td>
+            </tr>
+        </table>
     
   </html>
+
