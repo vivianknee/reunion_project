@@ -1,26 +1,8 @@
-    <style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
   
     @import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
-  
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
     
-    body {
-        padding: 30px;
-        background-color: rgb(32,42,68);
-      }
-
-    a, button {
-        font-family: "Kanit", sans-serif;
-        font-weight: 500;
-        font-size: 16px;
-        color:black;
-        text-decoration: none;
-    }
-  
     header {
         overflow: visible;
         background-color: black;
@@ -29,7 +11,7 @@
         top: 0;
         width: 100%;
         font-family: "Kanit", sans-serif;
-        font-size: 100%;
+        font-size: 200%;
         z-index: 999;
     }
 
@@ -44,18 +26,18 @@
         text-align: center;
         padding: 14px 16px;
         font-family: "Kanit", sans-serif;
-        font-size: 50%;
+        font-size: 100%;
     }
 
     .nav:hover {
         background-color: rgb(7, 7, 57);
     }
 
-  </style>
+</style>
 
-  <html class="header">
+  <html class="menu">
     {% include account.html %}     
-     <table class="header">
+     <table class="menu">
             <tr>
                 <td><a href="."><img src="{{site.baseurl}}/images/logo.png" width="120px"></a></td> 
                 <td><a href="/home" class="nav">Home</a></td>
@@ -64,7 +46,6 @@
                 <td><a href="/scrumboard" class="nav">About Us</a></td>
                 <td style="float:right"> <a action="javascript:" onclick="openForm()" class="nav">Sign In</a></td>
             </tr>
-        </table>
-    
-  </html>
+    </table>
+</html>
 
