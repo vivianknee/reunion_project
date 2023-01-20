@@ -4,7 +4,7 @@
         <header>
         </header>
             <div>
-                <button id="search_button">Search</button>
+                <button class="searchbutton" id="search_button">Search</button>
                 <table class="table-latitude">
                 <thead>
                     <tr>

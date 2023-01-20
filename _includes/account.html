@@ -16,7 +16,7 @@
         border-radius: 8px;
         z-index: 9;
     }
-    label {
+    .sign-in-label {
         color: white;
         font-family: "Kanit", sans-serif;
         font-size: 20px;
@@ -61,19 +61,19 @@
 <form onsubmit="create_User()" id="login">
     <h1><label>Create an account to save your car history</label></h1>
     
-    <p><label>
+    <p><label class="sign-in-label">
         Name:
         <input type="text" name="name" id="name" required>
     </label></p>
-    <p><label>
+    <p><label class="sign-in-label">
         Password:
         <input type="password" name="password" id="password" required>
     </label></p>
-    <p><label>
+    <p><label class="sign-in-label">
         Verify Password:
         <input type="password" name="passwordV" id="passwordV" required>
     </label></p>
-    <p><label>
+    <p><label class="sign-in-label">
         Email:
         <input type="email" name="email" id="email" required>
     </label></p>
