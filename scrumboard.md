@@ -5,47 +5,6 @@
         font-size: 30px;
         color: white;
     }
-
-    body {
-        font-family: "Kanit", sans-serif;
-    }
-
-    table {
-        border-collapse: collapse;
-        width: 800px;
-        height: 200px;
-        border: 1px solid white;
-    }
-
-    tr {
-        transition: all .2s ease-in;
-        cursor: pointer;
-    }
-
-    tr:hover {
-        background-color: white;
-        transform: scale(1.02);
-        box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    th,
-    td {
-        padding: 12px;
-        text-align: left;
-        border-bottom: 1px solid ;
-    }
-
-    @media only screen and (max-width: 768px) {
-        table {
-            width 90%
-        }
-    }
-
-    .background {
-    	background-color: white;
-        color: black;
-     }
-
 </style>
 
 <html>
