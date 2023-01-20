@@ -7,16 +7,10 @@
     }
 
     body {
-        padding: 0;
-        margin: 0;
         font-family: "Kanit", sans-serif;
     }
 
     table {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
         border-collapse: collapse;
         width: 800px;
         height: 200px;
