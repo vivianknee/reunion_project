@@ -42,7 +42,8 @@
     }
 
     .background {
-    	background-color: blue;
+    	background-color: white;
+        color: black;
      }
 
 </style>
