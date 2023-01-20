@@ -70,16 +70,12 @@
     <h3><label class="title">Login</label></h3>
     
     <p><label class="log-in-label">
-        Username:
-        <input type="text" name="username" id="username" required>
+        Email:
+        <input type="email" name="email" id="email" required>
     </label></p>
     <p><label class="log-in-label">
         Password:
         <input type="password" name="password" id="password" required>
-    </label></p>
-    <p><label class="log-in-label">
-        Email:
-        <input type="email" name="email" id="email" required>
     </label></p>
     <br><br>
     <p>
@@ -104,7 +100,6 @@
     }
     function create_User(){
         // extract data from inputs
-        const username = document.getElementById("Username").value;
         const email = document.getElementById("email").value;
         const password = document.getElementById("password").value;
         const requestOptions = {
@@ -115,7 +110,7 @@
             },
         };
         //url for Create API
-        const url='/api/create/' + username + '/' + email+ '/' + password;
+        const url='/api/create/' + email+ '/' + password;
         //Async fetch API call to the database to create a new user
         fetch(url, requestOptions).then(response => {
             // prepare HTML search result container for new output
