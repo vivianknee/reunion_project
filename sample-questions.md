@@ -20,7 +20,6 @@
     <label for="Muscle Car">Muscle Car</label><br>
     <input type="radio" id="html" name="carType" value="Van">
     <label for="Van">Van</label><br>
-
     <h3> 2. How many people should your car be able to seat?</h3>
     <input type="radio" id="html" name="seatNumber" value="2">
     <label for="2">2</label><br>
@@ -32,7 +31,6 @@
     <label for="8">8</label><br>
     <input type="radio" id="html" name="seatNumber" value="10">
     <label for="10">10</label><br>
-
     <h3> 3. What power source do you prefer?</h3>
     <input type="radio" id="html" name="powerSource" value="Gasoline">
     <label for="Gasoline">Gasoline</label><br>
@@ -46,7 +44,6 @@
     <label for="Hybrid">Hybrid</label><br>
     <input type="radio" id="html" name="powerSource" value="Fuel Cell">
     <label for="Fuel Cell">Fuel Cell</label><br>
-
     <h3> 4. Transmission Type?</h3>
     <input type="radio" id="html" name="transmission" value="Automatic">
     <label for="Automatic">Automatic</label><br>
@@ -54,7 +51,6 @@
     <label for="Manual">Manual</label><br>
     <input type="radio" id="html" name="transmission" value="Semi-Automatic">
     <label for="Semi-Automatic">Semi-Automatic</label><br>
-
     <h3> 5. Desired Mileage (in miles per gallon; please answer if you selected plug-in hybrid, hybird, gasoline, or diesel for question 3)</h3>
     <input type="radio" id="html" name="mileage" value="12-20 MPG">
     <label for="12-14 MPG">12-14 MPG</label><br>
@@ -66,7 +62,6 @@
     <label for="41-50 MPG">41-50 MPG</label><br>
     <input type="radio" id="html" name="mileage" value="51-60 MPG">
     <label for="51-60 MPG">51-60 MPG</label><br>
-
     <h3> 6. Desired Range (in miles per charge; please answer if you selected electric for question 3)</h3>
     <input type="radio" id="html" name="range" value="100-150 Miles">
     <label for="100-150 Miles">100-150 Miles</label><br>
@@ -84,7 +79,6 @@
     <label for="401-450 Miles">401-450 Miles</label><br>
     <input type="radio" id="html" name="range" value="451-500 Miles">
     <label for="451-500 Miles">451-500 Miles</label><br>
-
     <button type="button">Submit</button>
 </html>
 
