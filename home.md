@@ -65,7 +65,7 @@
       background-repeat: no-repeat;
       background-size: cover;
       position: relative; 
-      background-image: url("/images/carbackground.png");
+      background-image: url("/images/carbackdrop.png");
   }
 
 </style>
