@@ -1,3 +1,5 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <html>
     <h1> Car Catalog </h1>
        <p>find your ideal car by using the filters provided below</p>
