@@ -10,6 +10,7 @@
 </style>
 
 <html>
+    <iframe src='https://docs.google.com/presentation/d/1yeHywPixBMrbv9a2r5kRGrsx0IPC-QgBeF2XerAAYBo/edit?usp=sharing' width='100%' height='600px' frameborder='0'>
     <h1>Meet the Team!</h1>
     <body>
         <table>
