@@ -17,6 +17,9 @@
                                 <option value="minivan">Minivan</option>
                         </select>
                     </form>
+                 </div>
+                 <br>
+                 <div class="select">
                     <form>
                     <label for="engine">Engine:</label>
                         <select name="engine" id="engine">  
@@ -25,6 +28,9 @@
                                 <option value="electric">Electric</option>
                         </select>
                     </form>
+                 </div>
+                 <br>
+                 <div class="select">
                     <form>
                     <label for="Price Range">Price Range:</label>
                         <select name="Price Range" id="Price Range">  
@@ -97,8 +103,6 @@
         pointer-events:none;
         transition: .25s all ease;
     }
-
-    
 
     .searchbutton {
         background-color: white;
