@@ -49,7 +49,7 @@
                         <th>Type</th>
                     </tr>
                     </thead>
-                     <tbody onload="start()" id="result">
+                     <tbody id="result">
                     </tbody>
                 </table>
             </div>
