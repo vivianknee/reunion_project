@@ -7,7 +7,8 @@
         </header>
             <div>
                 <button class="searchbutton" id="search_button">Search</button>
-                <div class="navbar">
+                <br>
+                <div class="select">
                     <form>
                     <label for="Type">Type:</label>
                         <select name="Type" id="type">  
@@ -33,6 +34,7 @@
                         </select>
                     </form>
                 </div>
+                <br>
                 <table class="table-latitude">
                 <thead>
                     <tr>
@@ -41,13 +43,63 @@
                         <th>Type</th>
                     </tr>
                     </thead>
-                     <tbody id="result">
+                     <tbody onload="start()" id="result">
                     </tbody>
                 </table>
             </div>
   </html>
 
 <style>
+    select {
+        -webkit-appearance:none;
+        -moz-appearance:none;
+        -ms-appearance:none;
+        appearance:none;
+        outline:0;
+        box-shadow:none;
+        border:0!important;
+        background: #5c6664;
+        background-image: none;
+    }
+
+    select:: -ms-expand {
+        display: none;
+    }
+
+    .select {
+        position: relative;
+        display: flex;
+        width: 8em;
+        height: 2em;
+        line-height: 2;
+        background: #5c6664;
+        overflow: hidden;
+        border-radius: .25em;
+    }
+
+    select {
+        flex: 1;
+        padding: 0 .5em;
+        color: #fff;
+        cursor: pointer;
+        font-size: 1em;
+        font-family: "Kanit", sans-serif;
+    }
+
+    .select::after {
+        content: '\25BC';
+        position: absolute;
+        top:0;
+        right: 0;
+        padding: 0 1em;
+        background: #fff;
+        cursor: pointer;
+        pointer-events:none;
+        transition: .25s all ease;
+    }
+
+    
+
     .searchbutton {
         background-color: white;
         border-radius: 8px;
@@ -83,19 +135,13 @@
     const resultContainer = document.getElementById("result");
     const type_filter = document.getElementById("type");
 
-
     btnSearch.addEventListener('click', (event) => {
           var car_list = [
             { brand: "toyota", color: "white", type: "van", engine: "hybrid", price range: "2"},
             { brand: "honda", color: "red", type: "suv", engine: "ice", price range: "1"},
             { brand: "ferrari", color: "black", type: "sports car", engine: "electric", price range: "3"},
           ]
-          var mySearch = document.getElementById("result");
-          var rowCount = mySearch.rows.length;
-          for (var x=rowCount-1; x>0; x--) {
-                mySearch.deleteRow(x);
-            }
-
+          
           var value = type_filter.value; 
 
           for (const car of car_list){
