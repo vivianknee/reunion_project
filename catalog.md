@@ -86,11 +86,16 @@
 
     btnSearch.addEventListener('click', (event) => {
           var car_list = [
-            { brand: "toyota", color: "white", type: "van"},
-            { brand: "honda", color: "red", type: "suv"},
-            { brand: "ferrari", color: "black", type: "sports car"},
+            { brand: "toyota", color: "white", type: "van", engine: "hybrid", price range: "2"},
+            { brand: "honda", color: "red", type: "suv", engine: "ice", price range: "1"},
+            { brand: "ferrari", color: "black", type: "sports car", engine: "electric", price range: "3"},
           ]
-                
+          var mySearch = document.getElementById("result");
+          var rowCount = mySearch.rows.length;
+          for (var x=rowCount-1; x>0; x--) {
+                mySearch.deleteRow(x);
+            }
+
           var value = type_filter.value; 
 
           for (const car of car_list){
