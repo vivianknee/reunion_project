@@ -16,6 +16,22 @@
                                 <option value="minivan">Minivan</option>
                         </select>
                     </form>
+                    <form>
+                    <label for="Type">Engine:</label>
+                        <select name="Type" id="type">  
+                                <option value="suv">ICE</option>
+                                <option value="truck">Hybrid</option>
+                                <option value="minivan">Electric</option>
+                        </select>
+                    </form>
+                    <form>
+                    <label for="Type">Price Range:</label>
+                        <select name="Type" id="type">  
+                                <option value="suv">10-20k</option>
+                                <option value="truck">25-40k</option>
+                                <option value="minivan">40-60k</option>
+                        </select>
+                    </form>
                 </div>
                 <table class="table-latitude">
                 <thead>
@@ -130,6 +146,8 @@
 <script>
     const btnSearch = document.getElementById("search_button");
     const resultContainer = document.getElementById("result");
+    const type_filter = document.getElementById("type");
+
 
     btnSearch.addEventListener('click', (event) => {
           var car_list = [
@@ -137,6 +155,8 @@
             { brand: "honda", color: "red", year: 1995, type: "suv"},
             { brand: "ferrari", color: "black", year: 2015, type: "sports car"},
           ]
+                
+          var value = type_filter.value; 
 
           for (const car of car_list){
               console.log(car);
