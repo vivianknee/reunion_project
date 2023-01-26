@@ -17,19 +17,19 @@
                         </select>
                     </form>
                     <form>
-                    <label for="Type">Engine:</label>
-                        <select name="Type" id="type">  
-                                <option value="suv">ICE</option>
-                                <option value="truck">Hybrid</option>
-                                <option value="minivan">Electric</option>
+                    <label for="engine">Engine:</label>
+                        <select name="engine" id="engine">  
+                                <option value="ice">ICE</option>
+                                <option value="hybrid">Hybrid</option>
+                                <option value="electric">Electric</option>
                         </select>
                     </form>
                     <form>
-                    <label for="Type">Price Range:</label>
-                        <select name="Type" id="type">  
-                                <option value="suv">10-20k</option>
-                                <option value="truck">25-40k</option>
-                                <option value="minivan">40-60k</option>
+                    <label for="Price Range">Price Range:</label>
+                        <select name="Price Range" id="Price Range">  
+                                <option value="1">10-20k</option>
+                                <option value="2">25-40k</option>
+                                <option value="3">40-60k</option>
                         </select>
                     </form>
                 </div>
@@ -37,9 +37,7 @@
                 <thead>
                     <tr>
                         <th>Brand</th>
-                        <th>Color</th>
-                        <th>New?</th>
-                        <th>Year</th>
+                        <th>Color</th> 
                         <th>Type</th>
                     </tr>
                     </thead>
@@ -50,69 +48,6 @@
   </html>
 
 <style>
-    body {
-        font-family: "Kanit", sans-serif;
-        }
-
-    .navbar {
-        overflow: hidden;
-    }
-
-    .navbar a {
-        float: left;
-        font-size: 16px;
-        color: white;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-    }
-
-    .dropdown {
-        float: left;
-        overflow: hidden;
-    }
-
-    .dropdown .dropbtn {
-        font-size: 16px;  
-        border: none;
-        outline: none;
-        color: white;
-        padding: 14px 16px;
-        background-color: inherit;
-        font-family: inherit;
-        margin: 0;
-    }
-
-    .navbar a:hover, .dropdown:hover .dropbtn {
-        background-color: navy;
-    }
-
-    .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: #f9f9f9;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index: 1;
-    }
-
-    .dropdown-content a {
-        float: none;
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-        text-align: left;
-    }
-
-    .dropdown-content a:hover {
-        background-color: white;
-    }
-
-    .dropdown:hover .dropdown-content {
-        display: block;
-    }
-
     .searchbutton {
         background-color: white;
         border-radius: 8px;
@@ -151,16 +86,18 @@
 
     btnSearch.addEventListener('click', (event) => {
           var car_list = [
-            { brand: "toyota", color: "white", year: 2000, type: "van"},
-            { brand: "honda", color: "red", year: 1995, type: "suv"},
-            { brand: "ferrari", color: "black", year: 2015, type: "sports car"},
+            { brand: "toyota", color: "white", type: "van"},
+            { brand: "honda", color: "red", type: "suv"},
+            { brand: "ferrari", color: "black", type: "sports car"},
           ]
                 
           var value = type_filter.value; 
 
           for (const car of car_list){
               console.log(car);
-          
+
+            if (car["type"] === value)
+            {
               const tr = document.createElement("tr");
           
               const brand_ele = document.createElement("td");
@@ -169,19 +106,16 @@
               const color_ele = document.createElement("td");
               color_ele.innerHTML = car.color;
 
-              const year_ele = document.createElement("td");
-              year_ele.innerHTML = car.year.toString();
-
               const type_ele = document.createElement("td");
               type_ele.innerHTML = car.type;
 
           // this builds ALL td's (cells) into tr element
               tr.appendChild(brand_ele);
               tr.appendChild(color_ele);
-              tr.appendChild(year_ele);
               tr.appendChild(type_ele);
 
               resultContainer.appendChild(tr);
+            }
           }
     })
 
