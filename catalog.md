@@ -102,6 +102,11 @@
         cursor: pointer;
         pointer-events:none;
         transition: .25s all ease;
+        color: black;
+    }
+
+    .select:hover::after {
+        color: navy;
     }
 
     .searchbutton {
@@ -111,8 +116,7 @@
         border: none;
         margin: 0;
         font-family: "Kanit", sans-serif;
-        font-size: 20px;
-
+        font-size: 16px;
     }
 
     .searchbutton:hover {
