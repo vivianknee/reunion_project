@@ -147,9 +147,9 @@
 
     btnSearch.addEventListener('click', (event) => {
           var car_list = [
-            { brand: "toyota", color: "white", type: "van", engine: "hybrid", price range: "2"},
-            { brand: "honda", color: "red", type: "suv", engine: "ice", price range: "1"},
-            { brand: "ferrari", color: "black", type: "sports car", engine: "electric", price range: "3"},
+            { brand: "toyota", color: "white", type: "van", engine: "hybrid", price_range: "2"},
+            { brand: "honda", color: "red", type: "suv", engine: "ice", price_range: "1"},
+            { brand: "ferrari", color: "black", type: "sports car", engine: "electric", price_range: "3"},
           ]
           
           var value = type_filter.value; 
