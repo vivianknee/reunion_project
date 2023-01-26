@@ -5,8 +5,8 @@
        <p>Find your ideal car by using the filters provided below</p>
         <header>
         </header>
+            <button class="searchbutton" id="search_button">Search</button>
             <div>
-                <button class="searchbutton" id="search_button">Search</button>
                 <br>
                 <div class="select">
                     <form>
