@@ -2,38 +2,21 @@
 
 <html>
     <h1> Car Catalog </h1>
-       <p>find your ideal car by using the filters provided below</p>
+       <p>Find your ideal car by using the filters provided below</p>
         <header>
         </header>
             <div>
                 <button class="searchbutton" id="search_button">Search</button>
                 <div class="navbar">
-                    <div class="dropdown">
-                        <button class="dropbtn">Type<i class="fa fa-caret-down"></i></button>
-                        <div class="dropdown-content">
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
-                        </div>
-                    </div> 
-                    <div class="dropdown">
-                        <button class="dropbtn">Engine <i class="fa fa-caret-down"></i></button>
-                        <div class="dropdown-content">
-                        <a href="#">Electric engine</a>
-                        <a href="#">Internal Combustion Engine</a>
-                        <a href="#">Hybrid engine</a>
-                        </div>
-                    </div> 
-                    <div class="dropdown">
-                        <button class="dropbtn">Price Range <i class="fa fa-caret-down"></i></button>
-                        <div class="dropdown-content">
-                        <a href="#">10-25k</a>
-                        <a href="#">30-50k</a>
-                        <a href="#">55-70k</a>
-                        <a href="#">75k+</a>
-                        </div>
-                    </div> 
-                    </div>
+                    <form>
+                    <label for="cars">Type:</label>
+                        <select name="Type" id="type">  
+                                <option value="suv">SUV</option>
+                                <option value="truck">Truck</option>
+                                <option value="minivan">Minivan</option>
+                        </select>
+                    </form>
+                </div>
                 <table class="table-latitude">
                 <thead>
                     <tr>
@@ -46,7 +29,7 @@
                     </thead>
                      <tbody id="result">
                     </tbody>
-            </table>
+                </table>
             </div>
   </html>
 
