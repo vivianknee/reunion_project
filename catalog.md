@@ -47,7 +47,7 @@
                         <th>Brand</th>
                         <th>Color</th> 
                         <th>Type</th>
-                        <th>Engine</th>
+                        <th>Power Source</th>
                         <th>Price Range</th>
                     </tr>
                     </thead>
