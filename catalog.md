@@ -7,6 +7,33 @@
         </header>
             <div>
                 <button class="searchbutton" id="search_button">Search</button>
+                <div class="navbar">
+                    <div class="dropdown">
+                        <button class="dropbtn">Type<i class="fa fa-caret-down"></i></button>
+                        <div class="dropdown-content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                        </div>
+                    </div> 
+                    <div class="dropdown">
+                        <button class="dropbtn">Engine <i class="fa fa-caret-down"></i></button>
+                        <div class="dropdown-content">
+                        <a href="#">Electric engine</a>
+                        <a href="#">Internal Combustion Engine</a>
+                        <a href="#">Hybrid engine</a>
+                        </div>
+                    </div> 
+                    <div class="dropdown">
+                        <button class="dropbtn">Price Range <i class="fa fa-caret-down"></i></button>
+                        <div class="dropdown-content">
+                        <a href="#">10-25k</a>
+                        <a href="#">30-50k</a>
+                        <a href="#">55-70k</a>
+                        <a href="#">75k+</a>
+                        </div>
+                    </div> 
+                    </div>
                 <table class="table-latitude">
                 <thead>
                     <tr>
@@ -24,6 +51,69 @@
   </html>
 
 <style>
+    body {
+        font-family: "Kanit", sans-serif;
+        }
+
+    .navbar {
+        overflow: hidden;
+    }
+
+    .navbar a {
+        float: left;
+        font-size: 16px;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    .dropdown {
+        float: left;
+        overflow: hidden;
+    }
+
+    .dropdown .dropbtn {
+        font-size: 16px;  
+        border: none;
+        outline: none;
+        color: white;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+    }
+
+    .navbar a:hover, .dropdown:hover .dropbtn {
+        background-color: navy;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+
+    .dropdown-content a:hover {
+        background-color: white;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
     .searchbutton {
         background-color: white;
         border-radius: 8px;
