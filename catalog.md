@@ -10,33 +10,33 @@
                 <br>
                 <div class="select">
                     <form>
-                    <label for="type">Type:</label>
+                    <label for="type"> Type:</label>
                         <select name="type" id="type">  
-                                <option value="suv">SUV</option>
-                                <option value="truck">Truck</option>
-                                <option value="minivan">Minivan</option>
+                            <option value="suv">SUV</option>
+                            <option value="truck">Truck</option>
+                            <option value="minivan">Minivan</option>
                         </select>
                     </form>
                  </div>
                  <br>
                  <div class="select">
                     <form>
-                    <label for="engine">Engine:</label>
+                    <label for="engine"> Engine:</label>
                         <select name="engine" id="engine">  
-                                <option value="ice">ICE</option>
-                                <option value="hybrid">Hybrid</option>
-                                <option value="electric">Electric</option>
+                            <option value="ice">ICE</option>
+                            <option value="hybrid">Hybrid</option>
+                            <option value="electric">Electric</option>
                         </select>
                     </form>
                  </div>
                  <br>
                  <div class="select">
                     <form>
-                    <label for="Price Range">Price Range:</label>
-                        <select name="Price Range" id="Price Range">  
-                                <option value="1">10-20k</option>
-                                <option value="2">25-40k</option>
-                                <option value="3">40-60k</option>
+                    <label for="PriceRange"> Price Range:</label>
+                        <select name="PriceRange" id="PriceRange">  
+                            <option value="1">10-20k</option>
+                            <option value="2">25-40k</option>
+                            <option value="3">40-60k</option>
                         </select>
                     </form>
                 </div>
@@ -47,6 +47,8 @@
                         <th>Brand</th>
                         <th>Color</th> 
                         <th>Type</th>
+                        <th>Engine</th>
+                        <th>Price Range</th>
                     </tr>
                     </thead>
                      <tbody id="result">
@@ -156,25 +158,33 @@
               console.log(car);
 
             if (car["type"] === value)
-            {
-              const tr = document.createElement("tr");
-          
-              const brand_ele = document.createElement("td");
-              brand_ele.innerHTML = car.brand;
+                {
+                const tr = document.createElement("tr");
+            
+                const brand_ele = document.createElement("td");
+                brand_ele.innerHTML = car.brand;
 
-              const color_ele = document.createElement("td");
-              color_ele.innerHTML = car.color;
+                const color_ele = document.createElement("td");
+                color_ele.innerHTML = car.color;
 
-              const type_ele = document.createElement("td");
-              type_ele.innerHTML = car.type;
+                const type_ele = document.createElement("td");
+                type_ele.innerHTML = car.type;
 
-          // this builds ALL td's (cells) into tr element
-              tr.appendChild(brand_ele);
-              tr.appendChild(color_ele);
-              tr.appendChild(type_ele);
+                const engine = document.createElement("td");
+                engine.innerHTML = car.engine;
 
-              resultContainer.appendChild(tr);
-            }
+                const price = document.createElement("td");
+                price.innerHTML = car.price;
+
+            // this builds ALL td's (cells) into tr element
+                tr.appendChild(brand_ele);
+                tr.appendChild(color_ele);
+                tr.appendChild(type_ele);
+                tr.appendChild(engine);
+                tr.appendChild(price);
+
+                resultContainer.appendChild(tr);
+                }
           }
     })
 
