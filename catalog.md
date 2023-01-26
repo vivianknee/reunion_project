@@ -9,7 +9,7 @@
                 <button class="searchbutton" id="search_button">Search</button>
                 <div class="navbar">
                     <form>
-                    <label for="cars">Type:</label>
+                    <label for="Type">Type:</label>
                         <select name="Type" id="type">  
                                 <option value="suv">SUV</option>
                                 <option value="truck">Truck</option>
@@ -133,9 +133,9 @@
 
     btnSearch.addEventListener('click', (event) => {
           var car_list = [
-            { brand: "toyota", color: "white", is_new: "True", year: 2000, type: "van"},
-            { brand: "honda", color: "red", is_new: "False", year: 1995, type: "suv"},
-            { brand: "ferrari", color: "black", is_new: "True", year: 2015, type: "sports car"},
+            { brand: "toyota", color: "white", year: 2000, type: "van"},
+            { brand: "honda", color: "red", year: 1995, type: "suv"},
+            { brand: "ferrari", color: "black", year: 2015, type: "sports car"},
           ]
 
           for (const car of car_list){
@@ -149,9 +149,6 @@
               const color_ele = document.createElement("td");
               color_ele.innerHTML = car.color;
 
-              const isnew_ele = document.createElement("td");
-              isnew_ele.innerHTML = car.isnew;
-
               const year_ele = document.createElement("td");
               year_ele.innerHTML = car.year.toString();
 
@@ -161,7 +158,6 @@
           // this builds ALL td's (cells) into tr element
               tr.appendChild(brand_ele);
               tr.appendChild(color_ele);
-              tr.appendChild(isnew_ele);
               tr.appendChild(year_ele);
               tr.appendChild(type_ele);
 
