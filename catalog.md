@@ -10,8 +10,8 @@
                 <br>
                 <div class="select">
                     <form>
-                    <label for="Type">Type:</label>
-                        <select name="Type" id="type">  
+                    <label for="type">Type:</label>
+                        <select name="type" id="type">  
                                 <option value="suv">SUV</option>
                                 <option value="truck">Truck</option>
                                 <option value="minivan">Minivan</option>
