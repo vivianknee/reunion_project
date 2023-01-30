@@ -146,41 +146,44 @@
     const type_filter = document.getElementById("type");
 
     btnSearch.addEventListener('click', (event) => {
-          
+          console.log("Search Clicked!");
           var car_type_value = type_filter.value; //sets variable to the value of the filter that the user selects 
           var car_list = getCarResults(car_type_value, "ice", 1); //setting car_list to the result gotten in the function getCarResults
 
-          for (const car of car_list){
-              console.log(car);
+          console.log("Filtered cars retrieved!");
+          console.log(car_list);
+          console.log("Creating table!");
 
-                const tr = document.createElement("tr");
-            
-                const brand_ele = document.createElement("td");
-                brand_ele.innerHTML = car.brand;
+          for (const car of car_list) {
+            console.log(car);
 
-                const color_ele = document.createElement("td");
-                color_ele.innerHTML = car.color;
+            const tr = document.createElement("tr");
+        
+            const brand_ele = document.createElement("td");
+            brand_ele.innerHTML = car.brand;
 
-                const type_ele = document.createElement("td");
-                type_ele.innerHTML = car.type;
+            const color_ele = document.createElement("td");
+            color_ele.innerHTML = car.color;
 
-                const powersource_ele = document.createElement("td");
-                powersource.innerHTML = car.powersource;
+            const type_ele = document.createElement("td");
+            type_ele.innerHTML = car.type;
 
-                const price_ele = document.createElement("td");
-                price.innerHTML = car.price;
+            const powersource_ele = document.createElement("td");
+            powersource.innerHTML = car.powersource;
+
+            const price_ele = document.createElement("td");
+            price.innerHTML = car.price;
 
             // this builds ALL td's (cells) into tr element
-                tr.appendChild(brand_ele);
-                tr.appendChild(color_ele);
-                tr.appendChild(type_ele);
-                tr.appendChild(powersource_ele);
-                tr.appendChild(price_ele);
+            tr.appendChild(brand_ele);
+            tr.appendChild(color_ele);
+            tr.appendChild(type_ele);
+            tr.appendChild(powersource_ele);
+            tr.appendChild(price_ele);
 
-                resultContainer.appendChild(tr);
-                }
+            resultContainer.appendChild(tr);
           }
-    )
+    });
 
     function getCarResults(type, powersource, pricerange) {
         
