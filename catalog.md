@@ -205,6 +205,8 @@
 
             if (car["type"] === type && car["powersource"] === powersource && car["price_range"] === pricerange) {
                 result.push(car);
+            else:
+                document.getElementById("result").innerHTML = "No cars match your criteria. Try a different combination or refer to our Car article database for more information";
             }
         }
 
