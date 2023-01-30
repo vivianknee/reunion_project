@@ -146,19 +146,13 @@
     const type_filter = document.getElementById("type");
 
     btnSearch.addEventListener('click', (event) => {
-          var car_list = [
-            { brand: "toyota", color: "white", type: "van", powersource: "hybrid", price_range: "2"},
-            { brand: "honda", color: "red", type: "suv", powersource: "ice", price_range: "1"},
-            { brand: "ferrari", color: "black", type: "sports car", powersource: "electric", price_range: "3"},
-          ]
           
-          var value = type_filter.value; 
+          var car_type_value = type_filter.value; //sets variable to the value of the filter that the user selects 
+          var car_list = getCarResults(car_type_value, "ice", 1); //setting car_list to the result gotten in the function getCarResults
 
           for (const car of car_list){
               console.log(car);
 
-            if (car["type"] === value)
-                {
                 const tr = document.createElement("tr");
             
                 const brand_ele = document.createElement("td");
@@ -186,7 +180,26 @@
                 resultContainer.appendChild(tr);
                 }
           }
-    })
+    )
 
+    function getCarResults(type, powersource, pricerange) {
+        
+        var all_cars = [
+            { brand: "toyota", color: "white", type: "van", powersource: "hybrid", price_range: "2"},
+            { brand: "honda", color: "red", type: "suv", powersource: "ice", price_range: "1"},
+            { brand: "ferrari", color: "black", type: "sports car", powersource: "electric", price_range: "3"},
+          ]
+
+        var result = [];
+        for (const car of all_cars){
+              console.log(car);
+
+            if (car["type"] === type && car["powersource"] === powersource && car["price_range"] === pricerange) {
+                result.push(car);
+            }
+        }
+
+        return result;
+    }
   </script>
 
