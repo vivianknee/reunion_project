@@ -21,8 +21,8 @@
                  <br>
                  <div class="select">
                     <form>
-                    <label for="engine"> Engine:</label>
-                        <select name="engine" id="engine">  
+                    <label for="powersource"> Powersource:</label>
+                        <select name="powersource" id="powersource">  
                             <option value="ice">ICE</option>
                             <option value="hybrid">Hybrid</option>
                             <option value="electric">Electric</option>
@@ -147,9 +147,9 @@
 
     btnSearch.addEventListener('click', (event) => {
           var car_list = [
-            { brand: "toyota", color: "white", type: "van", engine: "hybrid", price_range: "2"},
-            { brand: "honda", color: "red", type: "suv", engine: "ice", price_range: "1"},
-            { brand: "ferrari", color: "black", type: "sports car", engine: "electric", price_range: "3"},
+            { brand: "toyota", color: "white", type: "van", powersource: "hybrid", price_range: "2"},
+            { brand: "honda", color: "red", type: "suv", powersource: "ice", price_range: "1"},
+            { brand: "ferrari", color: "black", type: "sports car", powersource: "electric", price_range: "3"},
           ]
           
           var value = type_filter.value; 
@@ -170,18 +170,18 @@
                 const type_ele = document.createElement("td");
                 type_ele.innerHTML = car.type;
 
-                const engine = document.createElement("td");
-                engine.innerHTML = car.engine;
+                const powersource_ele = document.createElement("td");
+                powersource.innerHTML = car.powersource;
 
-                const price = document.createElement("td");
+                const price_ele = document.createElement("td");
                 price.innerHTML = car.price;
 
             // this builds ALL td's (cells) into tr element
                 tr.appendChild(brand_ele);
                 tr.appendChild(color_ele);
                 tr.appendChild(type_ele);
-                tr.appendChild(engine);
-                tr.appendChild(price);
+                tr.appendChild(powersource_ele);
+                tr.appendChild(price_ele);
 
                 resultContainer.appendChild(tr);
                 }
