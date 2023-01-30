@@ -169,10 +169,10 @@
             type_ele.innerHTML = car.type;
 
             const powersource_ele = document.createElement("td");
-            powersource.innerHTML = car.powersource;
+            powersource_ele.innerHTML = car.powersource;
 
             const price_ele = document.createElement("td");
-            price.innerHTML = car.price;
+            price_ele.innerHTML = car.price_range;
 
             // this builds ALL td's (cells) into tr element
             tr.appendChild(brand_ele);
