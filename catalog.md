@@ -32,8 +32,8 @@
                  <br>
                  <div class="select">
                     <form>
-                    <label for="PriceRange"> Price Range:</label>
-                        <select name="PriceRange" id="PriceRange">  
+                    <label for="pricerange"> Price Range:</label>
+                        <select name="pricerange" id="pricerange">  
                             <option value="1">10-20k</option>
                             <option value="2">25-40k</option>
                             <option value="3">40-60k</option>
@@ -144,11 +144,16 @@
     const btnSearch = document.getElementById("search_button");
     const resultContainer = document.getElementById("result");
     const type_filter = document.getElementById("type");
+    const powersource_filter = document.getElementById("powersource");
+    const pricerange_filter = document.getElementById("pricerange");
 
     btnSearch.addEventListener('click', (event) => {
           console.log("Search Clicked!");
-          var car_type_value = type_filter.value; //sets variable to the value of the filter that the user selects 
-          var car_list = getCarResults(car_type_value, "ice", "1"); //setting car_list to the result gotten in the function getCarResults
+          var car_type_value = type_filter.value; //sets variable to the value of the filter that the user selects
+          var car_powersource_value = powersource_filter.value;
+          var car_pricerange_value = pricerange_filter.value; 
+
+          var car_list = getCarResults(car_type_value, car_powersource_value, car_pricerange_value); //setting car_list to the result gotten in the function getCarResults
 
           console.log("Filtered cars retrieved!");
           console.log(car_list);
@@ -172,6 +177,7 @@
             powersource_ele.innerHTML = car.powersource;
 
             const price_ele = document.createElement("td");
+            //put if statement here later
             price_ele.innerHTML = car.price_range;
 
             // this builds ALL td's (cells) into tr element
