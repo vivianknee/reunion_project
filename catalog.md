@@ -148,7 +148,7 @@
     btnSearch.addEventListener('click', (event) => {
           console.log("Search Clicked!");
           var car_type_value = type_filter.value; //sets variable to the value of the filter that the user selects 
-          var car_list = getCarResults(car_type_value, "ice", 1); //setting car_list to the result gotten in the function getCarResults
+          var car_list = getCarResults(car_type_value, "ice", "1"); //setting car_list to the result gotten in the function getCarResults
 
           console.log("Filtered cars retrieved!");
           console.log(car_list);
