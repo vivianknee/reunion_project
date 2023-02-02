@@ -1,3 +1,4 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <h1> Sample Questions </h1>
 <p>These are some of the questions that users will be prompted to answer. They will help the program narrow down the cars that are a best fit for them</p>
 
