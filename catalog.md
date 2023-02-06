@@ -12,6 +12,7 @@
                     <form>
                     <label for="type"> Type:</label>
                         <select name="type" id="type">  
+                            <option value=""> </option>
                             <option value="suv">SUV</option>
                             <option value="truck">Truck</option>
                             <option value="minivan">Minivan</option>
@@ -22,7 +23,8 @@
                  <div class="select">
                     <form>
                     <label for="powersource"> Powersource:</label>
-                        <select name="powersource" id="powersource">  
+                        <select name="powersource" id="powersource">
+                            <option value=""> </option>  
                             <option value="ice">ICE</option>
                             <option value="hybrid">Hybrid</option>
                             <option value="electric">Electric</option>
@@ -34,6 +36,7 @@
                     <form>
                     <label for="pricerange"> Price Range:</label>
                         <select name="pricerange" id="pricerange">  
+                            <option value=""> </option>
                             <option value="1">10-20k</option>
                             <option value="2">25-40k</option>
                             <option value="3">40-60k</option>
@@ -193,6 +196,7 @@
 
     function getCarResults(type, powersource, pricerange) {
         
+        var all_cars = [];
         fetch('http://127.0.0.1:8086/api/cars/').then(function(response) {
                 return response.json();
             }).then(function(data) {
@@ -201,7 +205,7 @@
             }).catch(function(err) {
                 console.log(err);
             });
-
+    
         // var all_cars = [
         //     { brand: "toyota", color: "white", type: "van", powersource: "hybrid", price_range: "2"},
         //     { brand: "honda", color: "red", type: "suv", powersource: "ice", price_range: "1"},
@@ -212,7 +216,9 @@
         for (const car of all_cars){
               console.log(car);
 
-            if (car["type"] === type && car["powersource"] === powersource && car["price_range"] === pricerange) {
+            if ((car["type"] === type || !type) && 
+                (car["powersource"] === powersource || !powersource) && 
+                (car["price_range"] === pricerange || !pricerange)) {
                 result.push(car);
             }
 
