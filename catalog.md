@@ -10,11 +10,56 @@
                 <br>
                 <div class="select">
                     <form>
+                    <label for="brand"> Brand:</label>
+                        <select name="brand" id="brand">  
+                            <option value=""> </option>
+                            <option value="Honda">Honda</option>
+                            <option value="Hyundai">Hyundai</option>
+                            <option value="Toyota">Toyota</option>
+                            <option value="Chevrolet">Chevrolet</option>
+                            <option value="Lexus">Lexus</option>
+                            <option value="Tesla">Tesla</option>
+                            <option value="Ferrari">Ferrari</option>
+                            <option value="Mercedes">Mercedes</option>
+                            <option value="Kia">Kia</option>
+                            <option value="Mazda">Mazda</option>
+                            <option value="Nissan">Nissan</option>
+                            <option value="Jeep">Jeep</option>
+                            <option value="Acura">Acura</option>
+                            <option value="Dodge">Dodge</option>
+                            <option value="Hummer">Hummer</option>
+                            <option value="Subaru">Subaru</option>
+                            <option value="Audi">Audi</option>
+                            <option value="BMW">BMW</option>
+                        </select>
+                    </form>
+                </div>
+                <br>
+                <div class="select">
+                    <form>
+                    <label for="color"> Color:</label>
+                        <select name="color" id="color">  
+                            <option value=""> </option>
+                            <option value="blue">Blue</option>
+                            <option value="yellow">Yellow</option>
+                            <option value="black">Black</option>
+                            <option value="gray">Gray</option>
+                            <option value="white">White</option>
+                            <option value="red">Red</option>
+                            <option value="silver">Silver</option>
+                        </select>
+                    </form>
+                </div>
+                <br>
+                <div class="select">
+                    <form>
                     <label for="type"> Type:</label>
                         <select name="type" id="type">  
+                            <option value=""> </option>
                             <option value="suv">SUV</option>
                             <option value="truck">Truck</option>
-                            <option value="minivan">Minivan</option>
+                            <option value="sedan">Sedan</option>
+                            <option value="sports">Sports</option>
                         </select>
                     </form>
                  </div>
@@ -22,7 +67,8 @@
                  <div class="select">
                     <form>
                     <label for="powersource"> Powersource:</label>
-                        <select name="powersource" id="powersource">  
+                        <select name="powersource" id="powersource">
+                            <option value=""> </option>  
                             <option value="ice">ICE</option>
                             <option value="hybrid">Hybrid</option>
                             <option value="electric">Electric</option>
@@ -34,6 +80,7 @@
                     <form>
                     <label for="pricerange"> Price Range:</label>
                         <select name="pricerange" id="pricerange">  
+                            <option value=""> </option>
                             <option value="1">10-20k</option>
                             <option value="2">25-40k</option>
                             <option value="3">40-60k</option>
@@ -143,17 +190,31 @@
 <script>
     const btnSearch = document.getElementById("search_button");
     const resultContainer = document.getElementById("result");
+    const brand_filter = document.getElementById("brand");
+    const color_filter = document.getElementById("color");
     const type_filter = document.getElementById("type");
     const powersource_filter = document.getElementById("powersource");
     const pricerange_filter = document.getElementById("pricerange");
 
+    let all_cars;
+    getAllCars();
+
     btnSearch.addEventListener('click', (event) => {
           console.log("Search Clicked!");
+          clearTable();
+          
+          var car_brand_value = brand_filter.value;
+          var car_color_value = color_filter.value; 
           var car_type_value = type_filter.value; //sets variable to the value of the filter that the user selects
           var car_powersource_value = powersource_filter.value;
           var car_pricerange_value = pricerange_filter.value; 
 
-          var car_list = getCarResults(car_type_value, car_powersource_value, car_pricerange_value); //setting car_list to the result gotten in the function getCarResults
+          var car_list = getCarResults(car_brand_value, car_color_value, car_type_value, car_powersource_value, car_pricerange_value); //setting car_list to the result gotten in the function getCarResults
+
+          if (car_list.length === 0) {
+            alert('No Cars Found')
+            return
+          }
 
           console.log("Filtered cars retrieved!");
           console.log(car_list);
@@ -191,23 +252,39 @@
           }
     });
 
-    function getCarResults(type, powersource, pricerange) {
-        
-        var all_cars = [
-            { brand: "toyota", color: "white", type: "van", powersource: "hybrid", price_range: "2"},
-            { brand: "honda", color: "red", type: "suv", powersource: "ice", price_range: "1"},
-            { brand: "ferrari", color: "black", type: "sports car", powersource: "electric", price_range: "3"},
-          ]
+    function clearTable() {
+        var tableRows = resultContainer.getElementsByTagName('tr');
+        var rowCount = tableRows.length;
 
+        for (var x=rowCount-1; x>=0; x--) {
+            resultContainer.removeChild(tableRows[x]);
+        }
+    }
+
+    function getAllCars() {
+        fetch('http://127.0.0.1:8086/api/cars/').then(function(response) {
+                return response.json();
+            }).then(function(data) {
+                console.log(data);
+                all_cars = data;
+            }).catch(function(err) {
+                console.log(err);
+            });
+    }
+
+    function getCarResults(brand, color, type, powersource, pricerange) {
         var result = [];
         for (const car of all_cars){
               console.log(car);
 
-            if (car["type"] === type && car["powersource"] === powersource && car["price_range"] === pricerange) {
+            if ((car["brand"] === brand || !brand) &&
+                (car["color"] === color || !color) &&
+                (car["type"] === type || !type) && 
+                (car["powersource"] === powersource || !powersource) && 
+                (car["price_range"] === pricerange || !pricerange)) {
                 result.push(car);
-            else:
-                document.getElementById("result").innerHTML = "No cars match your criteria. Try a different combination or refer to our Car article database for more information";
             }
+
         }
 
         return result;

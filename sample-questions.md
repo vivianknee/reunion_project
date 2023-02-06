@@ -17,8 +17,6 @@
         <label for="Hatchback">Hatchback</label><br>
         <input type="radio" id="html" name="carType" value="Sports Car">
         <label for="Sports Car">Sports Car</label><br>
-        <input type="radio" id="html" name="carType" value="Muscle Car">
-        <label for="Muscle Car">Muscle Car</label><br>
         <input type="radio" id="html" name="carType" value="Van">
         <label for="Van">Van</label><br>
     <h3> 2. How many people should your car be able to seat?</h3>
@@ -82,6 +80,8 @@
         <label for="451-500 Miles">451-500 Miles</label><br>
     <button class="testbutton">Submit</button>
 </html>
+
+*result goes here*
 
 <style>
     .testbutton {
