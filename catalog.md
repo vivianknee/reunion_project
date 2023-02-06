@@ -213,7 +213,9 @@
 
             if (car["type"] === type && car["powersource"] === powersource && car["price_range"] === pricerange) {
                 result.push(car);
-            else:
+            }
+            
+            else {
                 let msg = document.querySelector("result");
                 msg.innerText = "No cars fall under the criteria selected";
             }
