@@ -155,11 +155,17 @@
 
     btnSearch.addEventListener('click', (event) => {
           console.log("Search Clicked!");
+          resultContainer.innerHTML = "";
           var car_type_value = type_filter.value; //sets variable to the value of the filter that the user selects
           var car_powersource_value = powersource_filter.value;
           var car_pricerange_value = pricerange_filter.value; 
 
           var car_list = getCarResults(car_type_value, car_powersource_value, car_pricerange_value); //setting car_list to the result gotten in the function getCarResults
+
+          if (car_list.length === 0) {
+            alert('No Cars Found')
+            return
+          }
 
           console.log("Filtered cars retrieved!");
           console.log(car_list);
@@ -219,9 +225,6 @@
                 result.push(car);
             }
 
-            else {
-                alert("no cars");
-            }
         }
 
         return result;
