@@ -220,8 +220,7 @@
             }
 
             else {
-                let msg = document.querySelector("result");
-                msg.innerText = "No cars fall under the criteria selected";
+                alert("no cars");
             }
         }
 
