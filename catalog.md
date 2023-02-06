@@ -13,24 +13,24 @@
                     <label for="brand"> Brand:</label>
                         <select name="brand" id="brand">  
                             <option value=""> </option>
-                            <option value="honda">Honda</option>
-                            <option value="hyundai">Hyundai</option>
-                            <option value="toyota">Toyota</option>
-                            <option value="chevrolet">Chevrolet</option>
-                            <option value="lexus">Lexus</option>
-                            <option value="tesla">Tesla</option>
-                            <option value="ferrari">Ferrari</option>
-                            <option value="mercedes">Mercedes</option>
-                            <option value="kia">Kia</option>
-                            <option value="mazda">Mazda</option>
-                            <option value="nissan">Nissan</option>
-                            <option value="jeep">Jeep</option>
-                            <option value="acura">Acura</option>
-                            <option value="dodge">Dodge</option>
-                            <option value="hummer">Hummer</option>
-                            <option value="subaru">Subaru</option>
-                            <option value="audi">Audi</option>
-                            <option value="bmw">BMW</option>
+                            <option value="Honda">Honda</option>
+                            <option value="Hyundai">Hyundai</option>
+                            <option value="Toyota">Toyota</option>
+                            <option value="Chevrolet">Chevrolet</option>
+                            <option value="Lexus">Lexus</option>
+                            <option value="Tesla">Tesla</option>
+                            <option value="Ferrari">Ferrari</option>
+                            <option value="Mercedes">Mercedes</option>
+                            <option value="Kia">Kia</option>
+                            <option value="Mazda">Mazda</option>
+                            <option value="Nissan">Nissan</option>
+                            <option value="Jeep">Jeep</option>
+                            <option value="Acura">Acura</option>
+                            <option value="Dodge">Dodge</option>
+                            <option value="Hummer">Hummer</option>
+                            <option value="Subaru">Subaru</option>
+                            <option value="Audi">Audi</option>
+                            <option value="BMW">BMW</option>
                         </select>
                     </form>
                 </div>
