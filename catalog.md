@@ -10,12 +10,56 @@
                 <br>
                 <div class="select">
                     <form>
+                    <label for="brand"> Brand:</label>
+                        <select name="brand" id="brand">  
+                            <option value=""> </option>
+                            <option value="honda">Honda</option>
+                            <option value="hyundai">Hyundai</option>
+                            <option value="toyota">Toyota</option>
+                            <option value="chevrolet">Chevrolet</option>
+                            <option value="lexus">Lexus</option>
+                            <option value="tesla">Tesla</option>
+                            <option value="ferrari">Ferrari</option>
+                            <option value="mercedes">Mercedes</option>
+                            <option value="kia">Kia</option>
+                            <option value="mazda">Mazda</option>
+                            <option value="nissan">Nissan</option>
+                            <option value="jeep">Jeep</option>
+                            <option value="acura">Acura</option>
+                            <option value="dodge">Dodge</option>
+                            <option value="hummer">Hummer</option>
+                            <option value="subaru">Subaru</option>
+                            <option value="audi">Audi</option>
+                            <option value="bmw">BMW</option>
+                        </select>
+                    </form>
+                </div>
+                <br>
+                <div class="select">
+                    <form>
+                    <label for="color"> Color:</label>
+                        <select name="color" id="color">  
+                            <option value=""> </option>
+                            <option value="blue">Blue</option>
+                            <option value="yellow">Yellow</option>
+                            <option value="black">Black</option>
+                            <option value="gray">Gray</option>
+                            <option value="white">White</option>
+                            <option value="red">Red</option>
+                            <option value="silver">Silver</option>
+                        </select>
+                    </form>
+                </div>
+                <br>
+                <div class="select">
+                    <form>
                     <label for="type"> Type:</label>
                         <select name="type" id="type">  
                             <option value=""> </option>
                             <option value="suv">SUV</option>
                             <option value="truck">Truck</option>
-                            <option value="minivan">Minivan</option>
+                            <option value="minivan">Sedan</option>
+                            <option value="minivan">Sports</option>
                         </select>
                     </form>
                  </div>
@@ -146,6 +190,8 @@
 <script>
     const btnSearch = document.getElementById("search_button");
     const resultContainer = document.getElementById("result");
+    const brand_filter = document.getElementById("brand");
+    const color_filter = document.getElementById("color");
     const type_filter = document.getElementById("type");
     const powersource_filter = document.getElementById("powersource");
     const pricerange_filter = document.getElementById("pricerange");
@@ -156,7 +202,9 @@
     btnSearch.addEventListener('click', (event) => {
           console.log("Search Clicked!");
           clearTable();
-
+          
+          var car_brand_value = brand_filter.value;
+          var car_color_value = color_filter.value; 
           var car_type_value = type_filter.value; //sets variable to the value of the filter that the user selects
           var car_powersource_value = powersource_filter.value;
           var car_pricerange_value = pricerange_filter.value; 
@@ -224,14 +272,16 @@
             });
     }
 
-    function getCarResults(type, powersource, pricerange) {
+    function getCarResults(brand, color, type, powersource, pricerange) {
         var result = [];
         for (const car of all_cars){
               console.log(car);
 
             if ((car["type"] === type || !type) && 
                 (car["powersource"] === powersource || !powersource) && 
-                (car["price_range"] === pricerange || !pricerange)) {
+                (car["price_range"] === pricerange || !pricerange) &&
+                (car["brand"] === brand || !brand) &&
+                (car["color"] === color || !color)) {
                 result.push(car);
             }
 
