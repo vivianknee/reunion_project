@@ -196,7 +196,7 @@
         fetch('http://127.0.0.1:8086/api/cars/', { mode: 'no-cors'})
             .then(response => response.json())
             .then(data => console.log(data))
-            .catch(error => console.error(error));
+            .catch(error => console.error(error))
 
         // var all_cars = [
         //     { brand: "toyota", color: "white", type: "van", powersource: "hybrid", price_range: "2"},
