@@ -193,11 +193,19 @@
 
     function getCarResults(type, powersource, pricerange) {
         
-        var all_cars = [
-            { brand: "toyota", color: "white", type: "van", powersource: "hybrid", price_range: "2"},
-            { brand: "honda", color: "red", type: "suv", powersource: "ice", price_range: "1"},
-            { brand: "ferrari", color: "black", type: "sports car", powersource: "electric", price_range: "3"},
-          ]
+        fetch('https://example.com/data')
+            .then(response => response.json())
+            .then(data => {
+                    console.log(data);
+                    all_cars = data;
+                })
+            .catch(error => console.error(error));
+
+        // var all_cars = [
+        //     { brand: "toyota", color: "white", type: "van", powersource: "hybrid", price_range: "2"},
+        //     { brand: "honda", color: "red", type: "suv", powersource: "ice", price_range: "1"},
+        //     { brand: "ferrari", color: "black", type: "sports car", powersource: "electric", price_range: "3"},
+        //   ]
 
         var result = [];
         for (const car of all_cars){
