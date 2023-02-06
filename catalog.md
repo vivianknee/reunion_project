@@ -193,10 +193,13 @@
 
     function getCarResults(type, powersource, pricerange) {
         
-        fetch('http://127.0.0.1:8086/api/cars/', { mode: 'no-cors'})
-            .then(response => response.json())
-            .then(data => console.log(data))
-            .catch(error => console.error(error))
+        fetch('http://127.0.0.1:8086/api/cars/', { mode: 'no-cors'}).then(function(response) {
+                return response.json();
+            }).then(function(data) {
+                console.log(data);
+            }).catch(function(err) {
+                console.log('Fetch Error :-S', err);
+            });
 
         // var all_cars = [
         //     { brand: "toyota", color: "white", type: "van", powersource: "hybrid", price_range: "2"},
