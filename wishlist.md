@@ -37,16 +37,80 @@
 <html>
     <h1> Wishlist </h1>
         <p>Take a look at what you like!</p>
-<body class="d-flex flex-column min-vh-100">
-<main>
-    <div class="container-lg">
-    </div>
-</main>
+{
+  "tasticType": "commercetools/ui/wishlist",
+  "name": "commercetools UI wishlist",
+  "icon": "list",
+  "category": "Wishlist",
+  "schema": [
+    {
+      "name": "Empty State Data",
+      "fields": [
+        {
+          "label": "Page Title",
+          "field": "pageTitle",
+          "translatable": true,
+          "type": "string"
+        },
+        {
+          "label": "Empty State Image",
+          "field": "emptyStateImage",
+          "type": "media",
+          "required": true
+        },
+        {
+          "label": "Empty State Title",
+          "field": "emptyStateTitle",
+          "translatable": true,
+          "type": "string"
+        },
+        {
+          "label": "Empty State Subtitle",
+          "field": "emptyStateSubtitle",
+          "translatable": true,
+          "type": "string"
+        },
+        {
+          "label": "Call to Action Label",
+          "field": "emptyStateCTALabel",
+          "translatable": true,
+          "type": "string"
+        },
+        {
+          "label": "Call to Action Link",
+          "field": "emptyStateCTALink",
+          "type": "reference",
+          "required": true
+        }
+      ]
+    }
+  ]
+}
 
-<footer class="mt-auto footer py-3 bg-light">
-  <div class="container">
-  </small>
-  </div>
-</footer>
-</body>
-</html>
+import React from 'react';
+import { LineItem } from '@Types/wishlist/LineItem';
+import WishList from 'components/commercetools-ui/wishlist';
+import { useWishlist } from 'frontastic/provider';
+
+const WishlistTastic = ({ data }) => {
+  const { data: wishlist, removeLineItem } = useWishlist();
+
+  const removeLineItems = async (item: LineItem) => {
+    await removeLineItem(item.lineItemId);
+  };
+
+  return (
+    <WishList
+      pageTitle={data.pageTitle}
+      emptyStateImage={data.emptyStateImage}
+      emptyStateTitle={data.emptyStateTitle}
+      emptyStateSubtitle={data.emptyStateSubtitle}
+      emptyStateCTALabel={data.emptyStateCTALabel}
+      emptyStateCTALink={data.emptyStateCTALink}
+      items={wishlist}
+      removeLineItems={removeLineItems}
+    />
+  );
+};
+
+export default WishlistTastic;
