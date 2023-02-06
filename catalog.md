@@ -193,7 +193,7 @@
 
     function getCarResults(type, powersource, pricerange) {
         
-        fetch('http://127.0.0.1:8086/api/cars/')
+        fetch('http://127.0.0.1:8086/api/cars/', { mode: 'no-cors'})
             .then(response => response.json())
             .then(data => {
                     console.log(data);
