@@ -208,7 +208,7 @@
         var tableRows = resultContainer.getElementsByTagName('tr');
         var rowCount = tableRows.length;
 
-        for (var x=rowCount-1; x>0; x--) {
+        for (var x=rowCount-1; x>=0; x--) {
             resultContainer.removeChild(tableRows[x]);
         }
     }
