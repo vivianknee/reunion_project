@@ -193,12 +193,12 @@
 
     function getCarResults(type, powersource, pricerange) {
         
-        fetch('http://127.0.0.1:8086/api/cars/', { mode: 'no-cors'}).then(function(response) {
+        fetch('http://127.0.0.1:8086/api/cars/').then(function(response) {
                 return response.json();
             }).then(function(data) {
                 console.log(data);
             }).catch(function(err) {
-                console.log('Fetch Error :-S', err);
+                console.log(err);
             });
 
         // var all_cars = [
