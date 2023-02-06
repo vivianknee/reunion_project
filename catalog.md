@@ -278,7 +278,7 @@
               console.log(car);
 
             if ((car["brand"] === brand || !brand) &&
-                (car["color"] === color || !color)
+                (car["color"] === color || !color) &&
                 (car["type"] === type || !type) && 
                 (car["powersource"] === powersource || !powersource) && 
                 (car["price_range"] === pricerange || !pricerange)) {
