@@ -155,7 +155,8 @@
 
     btnSearch.addEventListener('click', (event) => {
           console.log("Search Clicked!");
-          resultContainer.innerHTML = "";
+          clearTable();
+
           var car_type_value = type_filter.value; //sets variable to the value of the filter that the user selects
           var car_powersource_value = powersource_filter.value;
           var car_pricerange_value = pricerange_filter.value; 
@@ -202,6 +203,15 @@
             resultContainer.appendChild(tr);
           }
     });
+
+    function clearTable() {
+        var tableRows = resultContainer.getElementsByTagName('tr');
+        var rowCount = tableRows.length;
+
+        for (var x=rowCount-1; x>0; x--) {
+            resultContainer.removeChild(tableRows[x]);
+        }
+    }
 
     function getAllCars() {
         fetch('http://127.0.0.1:8086/api/cars/').then(function(response) {
