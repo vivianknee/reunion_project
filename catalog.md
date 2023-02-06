@@ -195,10 +195,7 @@
         
         fetch('http://127.0.0.1:8086/api/cars/', { mode: 'no-cors'})
             .then(response => response.json())
-            .then(data => {
-                    console.log(data);
-                    all_cars = data;
-                })
+            .then(data => console.log(data))
             .catch(error => console.error(error));
 
         // var all_cars = [
