@@ -58,8 +58,8 @@
                             <option value=""> </option>
                             <option value="suv">SUV</option>
                             <option value="truck">Truck</option>
-                            <option value="minivan">Sedan</option>
-                            <option value="minivan">Sports</option>
+                            <option value="sedan">Sedan</option>
+                            <option value="sports">Sports</option>
                         </select>
                     </form>
                  </div>
@@ -209,7 +209,7 @@
           var car_powersource_value = powersource_filter.value;
           var car_pricerange_value = pricerange_filter.value; 
 
-          var car_list = getCarResults(car_type_value, car_powersource_value, car_pricerange_value); //setting car_list to the result gotten in the function getCarResults
+          var car_list = getCarResults(car_brand_value, car_color_value, car_type_value, car_powersource_value, car_pricerange_value); //setting car_list to the result gotten in the function getCarResults
 
           if (car_list.length === 0) {
             alert('No Cars Found')
@@ -277,11 +277,11 @@
         for (const car of all_cars){
               console.log(car);
 
-            if ((car["type"] === type || !type) && 
+            if ((car["brand"] === brand || !brand) &&
+                (car["color"] === color || !color)
+                (car["type"] === type || !type) && 
                 (car["powersource"] === powersource || !powersource) && 
-                (car["price_range"] === pricerange || !pricerange) &&
-                (car["brand"] === brand || !brand) &&
-                (car["color"] === color || !color)) {
+                (car["price_range"] === pricerange || !pricerange)) {
                 result.push(car);
             }
 
