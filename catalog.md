@@ -197,6 +197,7 @@
                 return response.json();
             }).then(function(data) {
                 console.log(data);
+                all_cars = data;
             }).catch(function(err) {
                 console.log(err);
             });
