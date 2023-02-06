@@ -150,6 +150,9 @@
     const powersource_filter = document.getElementById("powersource");
     const pricerange_filter = document.getElementById("pricerange");
 
+    let all_cars;
+    getAllCars();
+
     btnSearch.addEventListener('click', (event) => {
           console.log("Search Clicked!");
           var car_type_value = type_filter.value; //sets variable to the value of the filter that the user selects
@@ -194,9 +197,7 @@
           }
     });
 
-    function getCarResults(type, powersource, pricerange) {
-        
-        var all_cars = [];
+    function getAllCars() {
         fetch('http://127.0.0.1:8086/api/cars/').then(function(response) {
                 return response.json();
             }).then(function(data) {
@@ -205,13 +206,9 @@
             }).catch(function(err) {
                 console.log(err);
             });
-    
-        // var all_cars = [
-        //     { brand: "toyota", color: "white", type: "van", powersource: "hybrid", price_range: "2"},
-        //     { brand: "honda", color: "red", type: "suv", powersource: "ice", price_range: "1"},
-        //     { brand: "ferrari", color: "black", type: "sports car", powersource: "electric", price_range: "3"},
-        //   ]
+    }
 
+    function getCarResults(type, powersource, pricerange) {
         var result = [];
         for (const car of all_cars){
               console.log(car);
