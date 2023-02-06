@@ -193,7 +193,7 @@
 
     function getCarResults(type, powersource, pricerange) {
         
-        fetch('https://example.com/data')
+        fetch('http://127.0.0.1:8086/api/cars/')
             .then(response => response.json())
             .then(data => {
                     console.log(data);
@@ -214,7 +214,7 @@
             if (car["type"] === type && car["powersource"] === powersource && car["price_range"] === pricerange) {
                 result.push(car);
             }
-            
+
             else {
                 let msg = document.querySelector("result");
                 msg.innerText = "No cars fall under the criteria selected";
