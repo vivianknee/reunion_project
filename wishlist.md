@@ -21,17 +21,7 @@
     select:: -ms-expand {
         display: none;
     }
-
-    .select {
-        position: relative;
-        display: flex;
-        width: 15em;
-        height: 2em;
-        line-height: 2;
-        background: #5c6664;
-        overflow: hidden;
-        border-radius: .25em;
-    }
+    
     p {
         text-align:center
     }
