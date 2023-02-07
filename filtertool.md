@@ -3,7 +3,7 @@
 <html>
     <h1> Car Filter Tool </h1>
        <p>Find your ideal car by using the filters provided below</p>
-       <p> <bold>KEY:</bold> 
+       <p> <bold>Price range KEY:</bold> 
             <ul>
                 <li>1: 10-15k</li>
                 <li>2: 20-35k</li>
@@ -35,7 +35,7 @@
                             <option value="Jeep">Jeep</option>
                             <option value="Acura">Acura</option>
                             <option value="Dodge">Dodge</option>
-                            <option value="Hummer">Hummer</option>
+                            <option value="Ford">Ford</option>
                             <option value="Subaru">Subaru</option>
                             <option value="Audi">Audi</option>
                             <option value="BMW">BMW</option>

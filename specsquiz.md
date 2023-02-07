@@ -1,6 +1,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <h1> Specs Search </h1>
+<<<<<<< HEAD
 <p>Answer these questions with the specifications you want for your dream car!</p>
+=======
+<p>These are some of the questions that users will be prompted to answer. They will help the program narrow down the cars that are a best fit for them</p>
+>>>>>>> f56d7d14a4e2b66b85475c568a2805551872bc12
 
 
 <html>
