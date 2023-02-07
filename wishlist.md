@@ -32,6 +32,9 @@
         overflow: hidden;
         border-radius: .25em;
     }
+    p {
+        text-align:center
+    }
 </style>
 
 <html>
