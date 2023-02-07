@@ -35,7 +35,7 @@
                             <option value="Jeep">Jeep</option>
                             <option value="Acura">Acura</option>
                             <option value="Dodge">Dodge</option>
-                            <option value="Hummer">Hummer</option>
+                            <option value="Ford">Ford</option>
                             <option value="Subaru">Subaru</option>
                             <option value="Audi">Audi</option>
                             <option value="BMW">BMW</option>
