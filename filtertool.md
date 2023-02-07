@@ -1,8 +1,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <html>
-    <h1> Car Catalog </h1>
+    <h1> Car Filter Tool </h1>
        <p>Find your ideal car by using the filters provided below</p>
+       <p> <bold>KEY:</bold> 
+            <ul>
+                <li>1: 10-15k</li>
+                <li>2: 20-35k</li>
+                <li>3: 40-70k </li>
+                <li>4: 80k and up </li>
+            </ul>
+        </p>
         <header>
         </header>
             <button class="searchbutton" id="search_button">Search</button>
@@ -81,9 +89,10 @@
                     <label for="pricerange"> Price Range:</label>
                         <select name="pricerange" id="pricerange">  
                             <option value=""> </option>
-                            <option value="1">10-20k</option>
-                            <option value="2">25-40k</option>
-                            <option value="3">40-60k</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="3">4</option>
                         </select>
                     </form>
                 </div>
