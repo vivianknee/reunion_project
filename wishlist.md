@@ -68,4 +68,4 @@
 
 <html>
     <h1> Wishlist </h1>
-        <p>Take a look at what you like!</p> 
+        <p>Your personal wishlist</p> 
