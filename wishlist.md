@@ -69,3 +69,48 @@
 <html>
     <h1> Wishlist </h1>
         <p>Your personal wishlist</p> 
+</html>
+
+<script>
+carDict = {} 
+
+    const resultContainer = document.getElementById("result");
+
+    const btnDiag = document.getElementById("btn_get_diagnosis");
+    
+    const url = "https://vase.nighthawkcodescrums.gq/api/diagnosis/";
+
+    const options = {
+        method: 'GET', // *GET, POST, PUT, DELETE, etc.
+        mode: 'no-cors', // no-cors, *cors, same-origin
+        cache: 'default', // *default, no-cache, reload, force-cache, only-if-cached
+        credentials: 'omit', // include, *same-origin, omit
+        headers: {
+            'Content-Type': 'application/json'
+            // 'Content-Type': 'application/x-www-form-urlencoded',
+        },
+    };
+    // prepare fetch PUT options, clones with JS Spread Operator (...)
+    const put_options = {...options, method: 'PUT'}; // clones and replaces method
+
+    btnDiag.addEventListener('click', (event) => {
+        carStr = "";
+        for (const s in carDict) {
+            if (carDict[s]) {
+                carStr = carStr + s + ", ";
+            }
+        }
+
+        fetch(url+"car", options)
+            .then(response => {
+                if (response.status !== 200) {
+                    //error('GET API response failure: ' + response.status);
+                    return;
+                }
+                // valid response will have JSON data
+                response.json().then(output => {
+                    document.getElementById('output').innerHTML = JSON.stringify(output);
+                    console.log(output);
+                })
+            })
+    })
