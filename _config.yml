@@ -1,6 +1,9 @@
 theme: jekyll-theme-midnight
 title: "Shreya, Sarah, Vivian, Giannina Project"
-description: "reunion site and blog."
-gitorg: "https://github.com/jm1021/leuck_reunion"
-description: "Create Performance Task"
+description: "SSVG Car Project Create Performance Task"
+gitorg: "https://github.com/vivianknee/reunion_project"
 google_analytics:
+
+#remote_theme: pages-themes/midnight@v0.2.0
+#plugins:
+#- jekyll-remote-theme # add this line to the plugins list if you already have one
