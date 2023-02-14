@@ -10,14 +10,18 @@
             </tr>
             <tr>
                 <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
+                <td>10-15k</td>
             </tr>
             <tr>
-                <td>10-15k</td>
+                <td>2</td>
                 <td>20-35k</td>
+            </tr>
+             <tr>
+                <td>3</td>
                 <td>40-70k</td>
+            </tr>
+             <tr>
+                <td>4</td>
                 <td>80k and up</td>
             </tr>
           </table>
@@ -213,8 +217,6 @@
     border: 1px solid #ddd;
     padding: 8px;
     }
-
-    #prices tr:nth-child(even){background-color: #f2f2f2;}
 
     #prices tr:hover {background-color: #ddd;}
 
