@@ -3,14 +3,24 @@
 <html>
     <h1> Car Filter Tool </h1>
        <p>Find your ideal car by using the filters provided below</p>
-       <p> <bold>Price range KEY:</bold> 
-            <ul>
-                <li>1: 10-15k</li>
-                <li>2: 20-35k</li>
-                <li>3: 40-70k </li>
-                <li>4: 80k and up </li>
-            </ul>
-        </p>
+          <table id="prices">
+            <tr>
+                <th>KEY</th>
+                <th>Price Range</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>10-15k</td>
+                <td>20-35k</td>
+                <td>40-70k</td>
+                <td>80k and up</td>
+            </tr>
+          </table>
         <header>
         </header>
             <button class="searchbutton" id="search_button">Search</button>
@@ -191,6 +201,29 @@
         font-family: "Kanit", sans-serif;
         font-size: 15px;
         color: white;
+    }
+
+    #prices {
+    font-family: "Kanit", sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    }
+
+    #prices td, #prices th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    }
+
+    #prices tr:nth-child(even){background-color: #f2f2f2;}
+
+    #prices tr:hover {background-color: #ddd;}
+
+    #prices th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: beige;
+    color: black;
     }
 
 </style>
