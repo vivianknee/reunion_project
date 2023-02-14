@@ -9,7 +9,7 @@
         background-repeat: no-repeat;
         background-size: cover;
         position: relative; 
-        background-image: url("/images/carbackdrop.png");
+        background-image: url("{{ site.baseurl }}/images/carbackdrop.png");
         }
     </style>
     <header>
