@@ -210,7 +210,7 @@
     #prices {
     font-family: "Kanit", sans-serif;
     border-collapse: collapse;
-    width: 100%;
+    margin:auto;
     }
 
     #prices td, #prices th {
