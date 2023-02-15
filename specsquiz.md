@@ -119,28 +119,37 @@
 
             const tr = document.createElement("tr");
         
-            const brand_ele = document.createElement("td");
-            brand_ele.innerHTML = car.brand;
-
-            const color_ele = document.createElement("td");
-            color_ele.innerHTML = car.color;
+            const name_ele = document.createElement("td");
+            name_ele.innerHTML = car.name;
 
             const type_ele = document.createElement("td");
             type_ele.innerHTML = car.type;
 
-            const powersource_ele = document.createElement("td");
-            powersource_ele.innerHTML = car.powersource;
+            const seatingCapacity_ele = document.createElement("td");
+            seatingCapacity_ele.innerHTML = car.seatingCapacity;
 
-            const price_ele = document.createElement("td");
+            const powerSource_ele = document.createElement("td");
+            powerSource_ele.innerHTML = car.powerSource;
+
+            const transmission_ele = document.createElement("td");
             //put if statement here later
-            price_ele.innerHTML = car.price_range;
+            transmission_ele.innerHTML = car.transmission;
+
+            const mileage_ele = document.createElement("td");
+            mileage_ele.innerHTML = car.mileage;
+
+            const range_ele = document.createElement("td");
+            //put if statement here later
+            range_ele.innerHTML = car.range;
 
             // this builds ALL td's (cells) into tr element
-            tr.appendChild(brand_ele);
-            tr.appendChild(color_ele);
+            tr.appendChild(name_ele);
             tr.appendChild(type_ele);
-            tr.appendChild(powersource_ele);
-            tr.appendChild(price_ele);
+            tr.appendChild(seatingCapacity_ele);
+            tr.appendChild(powerSource_ele);
+            tr.appendChild(transmission_ele);
+            tr.appendChild(mileage_ele);
+            tr.appendChild(range_ele);
 
             resultContainer.appendChild(tr);
           }
@@ -156,7 +165,7 @@
     }
 
     function getAllCarSpecs() {
-        fetch('http://127.0.0.1:8086/api/cars/').then(function(response) { // make a new api and a new path in backend carspec.api
+        fetch('http://127.0.0.1:8086/api/carspec/').then(function(response) { // make a new api and a new path in backend carspec.api
                 return response.json();
             }).then(function(data) {
                 console.log(data);
@@ -166,16 +175,18 @@
             });
     }
 
-    function getCarSpecs(brand, color, type, powersource, pricerange) {
+    function getCarSpecs(name, type, seatingCapacity, powerSource, transmission, mileage, range) {
         var result = [];
         for (const car of all_carspecs){
               console.log(car);
 
-            if ((car["brand"] === brand || !brand) &&
-                (car["color"] === color || !color) &&
-                (car["type"] === type || !type) && 
-                (car["powersource"] === powersource || !powersource) && 
-                (car["price_range"] === pricerange || !pricerange)) {
+            if ((car["name"] === name || !name) &&
+                (car["type"] === type || !type) &&
+                (car["seatingCapacity"] === seatingCapacity || !seatingCapacity) &&  
+                (car["powerSource"] === powerSource || !powerSource)) &&
+                (car["transmission"] === transmission || !transmission) && 
+                (car["mileage"] === mileage || !mileage) && 
+                (car["range"] === range || !range) {
                 result.push(car);
             }
 
