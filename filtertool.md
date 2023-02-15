@@ -25,8 +25,7 @@
                 <td>80k and up</td>
             </tr>
           </table>
-        <header>
-        </header>
+            <br>
             <button class="searchbutton" id="search_button">Search</button>
             <div>
                 <br>
@@ -210,15 +209,13 @@
     #prices {
     font-family: "Kanit", sans-serif;
     border-collapse: collapse;
-    margin:auto;
+    table-layout: fixed;
     }
 
     #prices td, #prices th {
     border: 1px solid #ddd;
     padding: 8px;
     }
-
-    #prices tr:hover {background-color: #ddd;}
 
     #prices th {
     padding-top: 12px;
