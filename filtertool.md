@@ -113,6 +113,7 @@
                 <table class="table-latitude">
                 <thead>
                     <tr>
+                        <th></th>
                         <th>Brand</th>
                         <th>Color</th> 
                         <th>Type</th>
@@ -266,6 +267,15 @@
 
             const tr = document.createElement("tr");
         
+            const image_ele = document.createElement("td");
+           
+            var img = document.createElement('img');
+            img.src = "{{ site.baseurl }}/images/" + car.image + ".jpg";
+            img.width = "150";
+            img.height = "100";
+            console.log(img.src);
+            image_ele.appendChild(img);
+
             const brand_ele = document.createElement("td");
             brand_ele.innerHTML = car.brand;
 
@@ -283,6 +293,7 @@
             price_ele.innerHTML = car.pricerange;
 
             // this builds ALL td's (cells) into tr element
+            tr.appendChild(image_ele);
             tr.appendChild(brand_ele);
             tr.appendChild(color_ele);
             tr.appendChild(type_ele);
@@ -319,7 +330,7 @@
               console.log(car);
               console.log("price range from data is:" + typeof car["pricerange"] + car["pricerange"])
               console.log("being compared to:" + typeof pricerange + pricerange)
-              
+
             
             if ((car["brand"] === brand || !brand) &&
                 (car["color"] === color || !color) &&
