@@ -303,7 +303,7 @@
     }
 
     function getAllCars() {
-        fetch('http://127.0.0.1:8086/api/cars/').then(function(response) {
+        fetch('http://127.0.0.1:8080/api/cars/').then(function(response) {
                 return response.json();
             }).then(function(data) {
                 console.log(data);
