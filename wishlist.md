@@ -139,7 +139,7 @@ carDict = {}
 
     const btnCar = document.getElementById("btn_get_car");
     
-    const url = "";
+    const url = "http://127.0.0.1:8080/api/cars/";
 
     const options = {
         method: 'GET', // *GET, POST, PUT, DELETE, etc.
