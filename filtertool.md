@@ -317,15 +317,15 @@
         var result = [];
         for (const car of all_cars){
               console.log(car);
-              console.log("price range from data is:" + car["pricerange"])
-              console.log("being compared to:" + pricerange)
+              console.log("price range from data is:" + typeof car["pricerange"])
+              console.log("being compared to:" + typeof pricerange)
 
             
             if ((car["brand"] === brand || !brand) &&
                 (car["color"] === color || !color) &&
                 (car["type"] === type || !type) && 
                 (car["powersource"] === powersource || !powersource) && 
-                (car["pricerange"] === pricerange.toString() || !pricerange)) {
+                (car["pricerange"] === pricerange || !pricerange)) {
                 result.push(car);
             }
 
