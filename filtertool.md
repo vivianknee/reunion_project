@@ -270,9 +270,10 @@
             const image_ele = document.createElement("td");
            
             var img = document.createElement('img');
-            img.src = "{{ site.baseurl }}/images/1.jpg";
+            img.src = "{{ site.baseurl }}/images/" + car.img + ".jpg";
             img.width = "150";
             img.height = "100";
+            console.log(img.src);
             image_ele.appendChild(img);
 
             const brand_ele = document.createElement("td");
