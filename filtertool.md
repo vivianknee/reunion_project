@@ -319,12 +319,12 @@
               console.log(car);
               console.log("price range from data is:" + car["pricerange"])
               console.log("being compared to:" + pricerange)
-              
+
             if ((car["brand"] === brand || !brand) &&
                 (car["color"] === color || !color) &&
                 (car["type"] === type || !type) && 
                 (car["powersource"] === powersource || !powersource) && 
-                (car["pricerange"] === pricerange || !pricerange)) {
+                (car["pricerange"] === str(pricerange) || !pricerange)) {
                 result.push(car);
             }
 
