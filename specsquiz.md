@@ -103,7 +103,7 @@
           var car_powersource_value = powersource_filter.value;
           var car_pricerange_value = pricerange_filter.value; 
 
-          var car_list = getCarSpecs(car_brand_value, car_color_value, car_type_value, car_powersource_value, car_pricerange_value); //setting car_list to the result gotten in the function getCarResults
+          var car_list = getCarSpecs(car_name_value, car_type_value, car_seatingCapacity_value, car_powerSource_value, car_transmission_value, car_mileage_value, car_range_value); //setting car_list to the result gotten in the function getCarResults
 
           if (car_list.length === 0) {
             alert('No Cars Found')
