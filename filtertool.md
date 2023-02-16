@@ -280,7 +280,7 @@
 
             const price_ele = document.createElement("td");
             //put if statement here later
-            price_ele.innerHTML = car.price_range;
+            price_ele.innerHTML = car.pricerange;
 
             // this builds ALL td's (cells) into tr element
             tr.appendChild(brand_ele);
@@ -322,7 +322,7 @@
                 (car["color"] === color || !color) &&
                 (car["type"] === type || !type) && 
                 (car["powersource"] === powersource || !powersource) && 
-                (car["price_range"] === pricerange || !pricerange)) {
+                (car["pricerange"] === pricerange || !pricerange)) {
                 result.push(car);
             }
 
