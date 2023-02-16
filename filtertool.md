@@ -317,9 +317,10 @@
         var result = [];
         for (const car of all_cars){
               console.log(car);
-              console.log("price range from data is:" + typeof car["pricerange"])
-              console.log("being compared to:" + typeof pricerange)
-
+              console.log("price range from data is:" + typeof car["pricerange"] + car["pricerange"])
+              console.log("being compared to:" + typeof pricerange + pricerange)
+              
+              console.log()
             
             if ((car["brand"] === brand || !brand) &&
                 (car["color"] === color || !color) &&
