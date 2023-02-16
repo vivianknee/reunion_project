@@ -73,6 +73,7 @@
         <p><a href="http://localhost:4001/filtertool">Click here to find more cars</a></p>
         <table>
             <tr>
+                <th>Image</th>
                 <th>Brand</th>
                 <th>Type</th>
                 <th>Color</th>
