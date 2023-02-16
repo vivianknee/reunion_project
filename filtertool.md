@@ -320,11 +320,12 @@
               console.log("price range from data is:" + car["pricerange"])
               console.log("being compared to:" + pricerange)
 
+            
             if ((car["brand"] === brand || !brand) &&
                 (car["color"] === color || !color) &&
                 (car["type"] === type || !type) && 
                 (car["powersource"] === powersource || !powersource) && 
-                (car["pricerange"] === str(pricerange) || !pricerange)) {
+                (car["pricerange"] === pricerange.toString() || !pricerange)) {
                 result.push(car);
             }
 
