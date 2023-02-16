@@ -325,7 +325,7 @@
                 (car["color"] === color || !color) &&
                 (car["type"] === type || !type) && 
                 (car["powersource"] === powersource || !powersource) && 
-                (car["pricerange"] === pricerange || !pricerange)) {
+                (car["pricerange"] === parseInt(pricerange, 10) || !pricerange)) {
                 result.push(car);
             }
 
