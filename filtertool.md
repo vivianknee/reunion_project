@@ -105,7 +105,7 @@
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
-                            <option value="3">4</option>
+                            <option value="4">4</option>
                         </select>
                     </form>
                 </div>
@@ -320,7 +320,6 @@
               console.log("price range from data is:" + typeof car["pricerange"] + car["pricerange"])
               console.log("being compared to:" + typeof pricerange + pricerange)
               
-              console.log()
             
             if ((car["brand"] === brand || !brand) &&
                 (car["color"] === color || !color) &&
