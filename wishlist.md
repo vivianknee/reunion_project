@@ -69,6 +69,9 @@
 <html>
     <h1> Wishlist </h1>
         <p>Your personal wishlist</p> 
+    <body>
+        <p><a href="http://localhost:4001/filtertool">Click here to find more cars</a></p>
+    </body>
 </html>
 
 <script>
@@ -76,9 +79,9 @@ carDict = {}
 
     const resultContainer = document.getElementById("result");
 
-    const btnDiag = document.getElementById("btn_get_diagnosis");
+    const btnCar = document.getElementById("btn_get_car");
     
-    const url = "https://vase.nighthawkcodescrums.gq/api/diagnosis/";
+    const url = "";
 
     const options = {
         method: 'GET', // *GET, POST, PUT, DELETE, etc.
