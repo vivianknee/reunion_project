@@ -94,7 +94,7 @@
                 console.log(err);
             });
     }
-    var car_list = getAllCars(_image_, _brand, _type, _color, _powersource, _pricerange);
+    var car_list = getAllCars(_image, _brand, _type, _color, _powersource, _pricerange);
     
     for (const car of car_list) {
             console.log(car);
