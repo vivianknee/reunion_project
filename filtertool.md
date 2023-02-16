@@ -324,7 +324,7 @@
             });
     }
 
-    function getCarResults(image, brand, color, type, powersource, pricerange) {
+    function getCarResults(brand, color, type, powersource, pricerange) {
         var result = [];
         for (const car of all_cars){
               console.log(car);
