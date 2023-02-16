@@ -268,7 +268,12 @@
             const tr = document.createElement("tr");
         
             const image_ele = document.createElement("td");
-            image_ele.innerHTML = document.createElement("img");
+           
+            var img = document.createElement('img');
+            img.src = "{{ site.baseurl }}/images/1.jpg";
+            img.width = "150";
+            img.height = "100";
+            image_ele.appendChild(img);
 
             const brand_ele = document.createElement("td");
             brand_ele.innerHTML = car.brand;
