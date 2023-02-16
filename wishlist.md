@@ -71,6 +71,36 @@
         <p>Your personal wishlist</p> 
     <body>
         <p><a href="http://localhost:4001/filtertool">Click here to find more cars</a></p>
+        <table>
+            <tr>
+                <th>Car</th>
+                <th>Color</th>
+                <th>Type</th>
+                <th>Powersource</th>
+                <th>Price Range</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
     </body>
 </html>
 
