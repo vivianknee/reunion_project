@@ -3,16 +3,29 @@
 <html>
     <h1> Car Filter Tool </h1>
        <p>Find your ideal car by using the filters provided below</p>
-       <p> <bold>Price range KEY:</bold> 
-            <ul>
-                <li>1: 10-15k</li>
-                <li>2: 20-35k</li>
-                <li>3: 40-70k </li>
-                <li>4: 80k and up </li>
-            </ul>
-        </p>
-        <header>
-        </header>
+          <table id="prices">
+            <tr>
+                <th>KEY</th>
+                <th>Price Range</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>10-15k</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>20-35k</td>
+            </tr>
+             <tr>
+                <td>3</td>
+                <td>40-70k</td>
+            </tr>
+             <tr>
+                <td>4</td>
+                <td>80k and up</td>
+            </tr>
+          </table>
+            <br>
             <button class="searchbutton" id="search_button">Search</button>
             <div>
                 <br>
@@ -92,7 +105,7 @@
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
-                            <option value="3">4</option>
+                            <option value="4">4</option>
                         </select>
                     </form>
                 </div>
@@ -100,6 +113,7 @@
                 <table class="table-latitude">
                 <thead>
                     <tr>
+                        <th></th>
                         <th>Brand</th>
                         <th>Color</th> 
                         <th>Type</th>
@@ -193,6 +207,25 @@
         color: white;
     }
 
+    #prices {
+    font-family: "Kanit", sans-serif;
+    border-collapse: collapse;
+    table-layout: fixed;
+    }
+
+    #prices td, #prices th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    }
+
+    #prices th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: beige;
+    color: black;
+    }
+
 </style>
 
 
@@ -234,6 +267,15 @@
 
             const tr = document.createElement("tr");
         
+            const image_ele = document.createElement("td");
+           
+            var img = document.createElement('img');
+            img.src = "{{ site.baseurl }}/images/" + car.image + ".jpg";
+            img.width = "150";
+            img.height = "100";
+            console.log(img.src);
+            image_ele.appendChild(img);
+
             const brand_ele = document.createElement("td");
             brand_ele.innerHTML = car.brand;
 
@@ -248,9 +290,10 @@
 
             const price_ele = document.createElement("td");
             //put if statement here later
-            price_ele.innerHTML = car.price_range;
+            price_ele.innerHTML = car.pricerange;
 
             // this builds ALL td's (cells) into tr element
+            tr.appendChild(image_ele);
             tr.appendChild(brand_ele);
             tr.appendChild(color_ele);
             tr.appendChild(type_ele);
@@ -271,7 +314,7 @@
     }
 
     function getAllCars() {
-        fetch('http://127.0.0.1:8086/api/cars/').then(function(response) {
+        fetch('http://127.0.0.1:8080/api/cars/').then(function(response) {
                 return response.json();
             }).then(function(data) {
                 console.log(data);
@@ -285,12 +328,15 @@
         var result = [];
         for (const car of all_cars){
               console.log(car);
+              console.log("price range from data is:" + typeof car["pricerange"] + car["pricerange"])
+              console.log("being compared to:" + typeof pricerange + pricerange)
 
+            
             if ((car["brand"] === brand || !brand) &&
                 (car["color"] === color || !color) &&
                 (car["type"] === type || !type) && 
                 (car["powersource"] === powersource || !powersource) && 
-                (car["price_range"] === pricerange || !pricerange)) {
+                (car["pricerange"] === parseInt(pricerange, 10) || !pricerange)) {
                 result.push(car);
             }
 
