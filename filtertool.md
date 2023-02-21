@@ -312,9 +312,9 @@
             resultContainer.removeChild(tableRows[x]);
         }
     }
-
+    
     function getAllCars() {
-        fetch('http://127.0.0.1:8080/api/cars/').then(function(response) {
+        fetch('https://finalssvgcars.duckdns.org/api/cars/').then(function(response) {
                 return response.json();
             }).then(function(data) {
                 console.log(data);
