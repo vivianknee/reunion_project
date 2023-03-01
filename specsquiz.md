@@ -1,200 +1,170 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <h1> Specs Search </h1>
-
-<p>Answer these questions with the specifications you want for your dream car!</p>
-<p>These are some of the questions that users will be prompted to answer. They will help the program narrow down the cars that are a best fit for them</p>
-
-
-<html>
-    <h3> 1. What type of car do you wish to buy? </h3>
-        <input type="radio" id="html" name="carType" value="Sedan">
-        <label for="Sedan">Sedan</label><br>
-        <input type="radio" id="html" name="carType" value="SUV">
-        <label for="SUV">SUV</label><br>
-        <input type="radio" id="html" name="carType" value="Pickup Truck">
-        <label for="Pickup Truck">Pickup Truck</label><br>
-        <input type="radio" id="html" name="carType" value="Sports Car">
-        <label for="Sports Car">Sports Car</label><br>
-        <input type="radio" id="html" name="carType" value="Van">
-        <label for="Van">Van</label><br>
-        <input type="radio" id="html" name="carType" value="Convertible">
-        <label for="Convertible">Convertible</label><br>
-        <input type="radio" id="html" name="carType" value="Coupe">
-        <label for="Coupe">Coupe</label><br>
-    <h3> 2. How many people should your car be able to seat?</h3>
-        <input type="radio" id="html" name="seatNumber" value="2">
-        <label for="2">2</label><br>
-        <input type="radio" id="html" name="seatNumber" value="5">
-        <label for="5">5</label><br>
-        <input type="radio" id="html" name="seatNumber" value="7">
-        <label for="7">7</label><br>
-        <input type="radio" id="html" name="seatNumber" value="8">
-        <label for="8">8</label><br>
-        <input type="radio" id="html" name="seatNumber" value="10">
-        <label for="10">10</label><br>
-        <input type="radio" id="html" name="seatNumber" value="15">
-        <label for="15">15</label><br>
-    <h3> 3. What power source do you prefer?</h3>
-        <input type="radio" id="html" name="powerSource" value="Gasoline">
-        <label for="Gasoline">Gasoline</label><br>
-        <input type="radio" id="html" name="powerSource" value="Electric">
-        <label for="Electric">Electric</label><br>
-    <h3> 4. Transmission Type?</h3>
-        <input type="radio" id="html" name="transmission" value="Automatic">
-        <label for="Automatic">Automatic</label><br>
-        <input type="radio" id="html" name="transmission" value="Manual">
-        <label for="Manual">Manual</label><br>
-    <h3> 5. Desired Mileage (in miles per gallon)</h3>
-        <input type="radio" id="html" name="mileage" value="Non-Gasoline">
-        <label for="Non-Gasoline">Non-Gasoline (select if you want an electric car)</label><br>
-        <input type="radio" id="html" name="mileage" value="a">
-        <label for="a">10-20 MPG</label><br>
-        <input type="radio" id="html" name="mileage" value="b">
-        <label for="b">21-30 MPG</label><br>
-        <input type="radio" id="html" name="mileage" value="c">
-        <label for="c">31-40 MPG</label><br>
-    <h3> 6. Desired Range (in miles per charge)</h3>
-        <input type="radio" id="html" name="mileage" value="Non-Electric">
-        <label for="Non-Electric">Non-Electric (select if you want a gasoline car)</label><br>
-        <input type="radio" id="html" name="mileage" value="1">
-        <label for="1">200-250 Miles</label><br>
-        <input type="radio" id="html" name="mileage" value="2">
-        <label for="2">251-300 Miles</label><br>
-        <input type="radio" id="html" name="mileage" value="3">
-        <label for="3">301-350 Miles</label><br>
-        <input type="radio" id="html" name="mileage" value="4">
-        <label for="4">351-400 Miles</label><br>
-    <button class="testbutton">Submit</button>
-    <table class="table-latitude">
-                <thead>
-                    <tr>
-                        <th>Type</th>
-                        <th>Seating Capacity</th> 
-                        <th>Power Source</th>
-                        <th>Transmission Type</th>
-                        <th>Mileage</th>
-                        <th>Range</th>
-                    </tr>
-                    </thead>
-                     <tbody id="result">
-                    </tbody>
-                </table>
-</html>
+<p>Search for your dream car using specifications!</p>
+<p>Answer these questions with the specifications you want for your dream car! This will help the program narrow down the cars that are a best fit for you!</p>
 
 <script>
-    const btnSearch = document.getElementById("search_button");
-    const resultContainer = document.getElementById("result");
-    const type_answer = document.getElementById("type"); // modify all stuff below
-    const color_filter = document.getElementById("color");
-    const type_filter = document.getElementById("type");
-    const powersource_filter = document.getElementById("powersource");
-    const pricerange_filter = document.getElementById("pricerange");
-
-    let all_carspecs;
-    getAllCarSpecs();
-
-    btnSearch.addEventListener('click', (event) => {
-          console.log("Search Clicked!");
-          clearTable();
-          
-          var car_brand_value = brand_filter.value;
-          var car_color_value = color_filter.value; 
-          var car_type_value = type_filter.value; //sets variable to the value of the filter that the user selects
-          var car_powersource_value = powersource_filter.value;
-          var car_pricerange_value = pricerange_filter.value; 
-
-          var car_list = getCarSpecs(car_name_value, car_type_value, car_seatingCapacity_value, car_powerSource_value, car_transmission_value, car_mileage_value, car_range_value); //setting car_list to the result gotten in the function getCarResults
-
-          if (car_list.length === 0) {
-            alert('No Cars Found')
-            return
-          }
-
-          console.log("Filtered car specs retrieved!");
-          console.log(car_list);
-          console.log("Creating table!");
-
-          for (const car of car_list) {
-            console.log(car);
-
-            const tr = document.createElement("tr");
-        
-            const name_ele = document.createElement("td");
-            name_ele.innerHTML = car.name;
-
-            const type_ele = document.createElement("td");
-            type_ele.innerHTML = car.type;
-
-            const seatingCapacity_ele = document.createElement("td");
-            seatingCapacity_ele.innerHTML = car.seatingCapacity;
-
-            const powerSource_ele = document.createElement("td");
-            powerSource_ele.innerHTML = car.powerSource;
-
-            const transmission_ele = document.createElement("td");
-            //put if statement here later
-            transmission_ele.innerHTML = car.transmission;
-
-            const mileage_ele = document.createElement("td");
-            mileage_ele.innerHTML = car.mileage;
-
-            const range_ele = document.createElement("td");
-            //put if statement here later
-            range_ele.innerHTML = car.range;
-
-            // this builds ALL td's (cells) into tr element
-            tr.appendChild(name_ele);
-            tr.appendChild(type_ele);
-            tr.appendChild(seatingCapacity_ele);
-            tr.appendChild(powerSource_ele);
-            tr.appendChild(transmission_ele);
-            tr.appendChild(mileage_ele);
-            tr.appendChild(range_ele);
-
-            resultContainer.appendChild(tr);
-          }
-    });
-
-    function clearTable() {
-        var tableRows = resultContainer.getElementsByTagName('tr');
-        var rowCount = tableRows.length;
-
-        for (var x=rowCount-1; x>=0; x--) {
-            resultContainer.removeChild(tableRows[x]);
-        }
-    }
-
-    function getAllCarSpecs() {
-        fetch('http://127.0.0.1:8086/api/carspec/').then(function(response) { // make a new api and a new path in backend carspec.api
-                return response.json();
-            }).then(function(data) {
-                console.log(data);
-                all_carspecs = data;
-            }).catch(function(err) {
-                console.log(err);
-            });
-    }
-
-    function getCarSpecs(name, type, seatingCapacity, powerSource, transmission, mileage, range) {
-        var result = [];
-        for (const car of all_carspecs){
-              console.log(car);
-
-            if ((car["name"] === name || !name) &&
-                (car["type"] === type || !type) &&
-                (car["seatingCapacity"] === seatingCapacity || !seatingCapacity) &&  
-                (car["powerSource"] === powerSource || !powerSource)) &&
-                (car["transmission"] === transmission || !transmission) && 
-                (car["mileage"] === mileage || !mileage) && 
-                (car["range"] === range || !range) {
-                result.push(car);
+            function validate(event) {
+                event.preventDefault();
+                //Rest of the code
             }
-
-        }
-
-        return result;
-    }
+            function search_car() {
+                let input = document.getElementById('type').value
+                input = input.toLowerCase();
+                for (i = 0; i < x.length; i++) {
+                    if (!x[i].innerHTML.toLowerCase().includes(input)) {
+                        x[i].style.display = "none";
+                    }
+                    else {
+                        x[i].style.display = "list-item";
+                    }
+                }
+            }
+            function showTable() {
+                alert("fetching");
+                const read_options = {
+                    method: 'GET', // *GET, POST, PUT, DELETE, etc.
+                    mode: 'cors', // no-cors, *cors, same-origin
+                    cache: 'default', // *default, no-cache, reload, force-cache, only-if-cached
+                    credentials: 'omit', // include, *same-origin, omit
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                };
+                fetch('https://finalssvgcars.duckdns.org/api/carspecs', read_options)
+                    .then(response => response.json())
+                    .then(data => createTable(data));
+                //  $(".table").remove();*/
+               //  createTable(data);
+               return false;
+            }
+            function createTable(data)
+            {
+                alert("Getting data");
+                // $("#table").remove();
+                var table = "<table class='table' border=1 style='color:#fff !important; background-color:#d09c00 !important'>";
+                // add a row for name and marks
+                table += `<tr>
+                                      <th>Model Name</th>
+                                      <th>Type</th>
+                                      <th>Seating Capacity</th>
+                                      <th>Power Source</th>
+                                      <th>Transmission Type</th>
+                                      <th>Mileage</th>
+                                      <th>Range</th>
+                                    </tr>`;
+                // now add another row to show subject
+                table += `<tr>
+                                      <th width=200></th>
+                                      <th width=200></th>
+                                      <th width=200></th>
+                                      <th width=200></th>
+                                      <th width=200></th>
+                                      <th width=200></th>
+                                      <th width=200></th>
+                                    </tr>`;
+                var tr = "";
+                var b = document.getElementById("type").value;
+                var c = document.getElementById("seatingCapacity").value;
+                var d = document.getElementById("powerSource").value;
+                var e = document.getElementById("transmission").value;
+                var f = document.getElementById("mileage").value;
+                var g = document.getElementById("range").value;
+                // alert(data[0].cuisine);
+                for (let i = 0; i < data.length; i++) {
+                    if (data[i].type.toLowerCase() == b.toLowerCase() && data[i].seatingCapacity.toLowerCase() == c.toLowerCase() && data[i].powerSource.toLowerCase() == d.toLowerCase() && data[i].transmission.toLowerCase() == e.toLowerCase() && data[i].mileage.toLowerCase() == f.toLowerCase() && data[i].range.toLowerCase() == g.toLowerCase()) {
+                        //alert(data[i].recipename);
+                      tr += "<tr>";
+                        tr += `<td>${data[i].name}</td>`;
+                        tr += `<td>${data[i].type}</td>`;
+                        tr += `<td>${data[i].seatingCapacity}</td>`;
+                        tr += `<td>${data[i].powerSource}</td>`;
+                        tr += `<td>${data[i].transmission}</td>`;
+                        tr += `<td>${data[i].mileage}</td>`;
+                        tr += `<td>${data[i].range}</td>`;
+                        tr += "</tr>"
+                    }
+                }
+                table += tr + "</table>";
+                document.getElementById("table").innerHTML += table;
+                document.getElementById("range").value = g;
+                document.getElementById("mileage").value = f;
+                document.getElementById("transmission").value = e;
+                document.getElementById("powerSource").value = d;
+                document.getElementById("seatingCapacity").value = c;
+                document.getElementById("type").value = b;
+                alert("done");
+            }
+            function HideSuggestRecipe(){
+                var x = document.getElementById("submit");
+                    x.style.display = "none";
+            }
+            function UnhideData() {
+                var x = document.getElementById("submit");
+                x.style.display = "block";
+            }
 </script>
+
+<html>
+    <form onsubmit="validate(); return false;" class="w3-container w3-theme w3-card">
+    <h3> 1. What type of car do you wish to buy? </h3>
+        <input type="radio" id="Sedan" name="type" value="Sedan">
+        <label for="Sedan">Sedan</label><br>
+        <input type="radio" id="SUV" name="type" value="SUV">
+        <label for="SUV">SUV</label><br>
+        <input type="radio" id="Pickup Truck" name="type" value="Pickup Truck">
+        <label for="Pickup Truck">Pickup Truck</label><br>
+        <input type="radio" id="Sports Car" name="type" value="Sports Car">
+        <label for="Sports Car">Sports Car</label><br>
+        <input type="radio" id="Van" name="type" value="Van">
+        <label for="Van">Van</label><br>
+        <input type="radio" id="Convertible" name="type" value="Convertible">
+        <label for="Convertible">Convertible</label><br>
+        <input type="radio" id="Coupe" name="type" value="Coupe">
+        <label for="Coupe">Coupe</label><br>
+    <h3> 2. How many people should your car be able to seat?</h3>
+        <input type="radio" id="5" name="seatingCapacity" value="5">
+        <label for="5">5</label><br>
+        <input type="radio" id="7" name="seatingCapacity" value="7">
+        <label for="7">7</label><br>
+        <input type="radio" id="8" name="seatingCapacity" value="8">
+        <label for="8">8</label><br>
+        <input type="radio" id="10" name="seatingCapacity" value="10">
+        <label for="10">10</label><br>
+        <input type="radio" id="15" name="seatingCapacity" value="15">
+        <label for="15">15</label><br>
+    <h3> 3. What power source do you prefer?</h3>
+        <input type="radio" id="Gasoline" name="powerSource" value="Gasoline">
+        <label for="Gasoline">Gasoline</label><br>
+        <input type="radio" id="Electric" name="powerSource" value="Electric">
+        <label for="Electric">Electric</label><br>
+    <h3> 4. Transmission Type?</h3>
+        <input type="radio" id="Automatic" name="transmission" value="Automatic">
+        <label for="Automatic">Automatic</label><br>
+        <input type="radio" id="Manual" name="transmission" value="Manual">
+        <label for="Manual">Manual</label><br>
+    <h3> 5. Desired Mileage (in miles per gallon)</h3>
+        <input type="radio" id="Non-Gasoline" name="mileage" value="Non-Gasoline">
+        <label for="Non-Gasoline">Non-Gasoline (select if you want an electric car)</label><br>
+        <input type="radio" id="a" name="mileage" value="a">
+        <label for="a">10-20 MPG</label><br>
+        <input type="radio" id="b" name="mileage" value="b">
+        <label for="b">21-30 MPG</label><br>
+        <input type="radio" id="c" name="mileage" value="c">
+        <label for="c">31-40 MPG</label><br>
+    <h3> 6. Desired Range (in miles per charge)</h3>
+        <input type="radio" id="Non-Electric" name="range" value="Non-Electric">
+        <label for="Non-Electric">Non-Electric (select if you want a gasoline car)</label><br>
+        <input type="radio" id="1" name="range" value="1">
+        <label for="1">200-250 Miles</label><br>
+        <input type="radio" id="2" name="range" value="2">
+        <label for="2">251-300 Miles</label><br>
+        <input type="radio" id="3" name="range" value="3">
+        <label for="3">301-350 Miles</label><br>
+        <input type="radio" id="4" name="range" value="4">
+        <label for="4">351-400 Miles</label><br>
+        <input id="submit" type="submit" value="Find Cars" onclick="showTable(); return false;">
+    <h3>
 
 <style>
     .testbutton {
@@ -205,7 +175,6 @@
         margin: 0;
         font-family: "Kanit", sans-serif;
         font-size: 20px;
-
     }
 
     .testbutton:hover {
