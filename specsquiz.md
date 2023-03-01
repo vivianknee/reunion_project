@@ -63,6 +63,7 @@
         <label for="4">351-400 Miles</label><br>
         <input id="submit" type="submit" value="Find Cars" onclick="showTable(); return false;">
     <h3>
+</html>
 
 <style>
     .testbutton {
