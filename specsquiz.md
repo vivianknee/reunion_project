@@ -6,19 +6,19 @@
 <html>
     <form onsubmit="validate(); return false;" class="w3-container w3-theme w3-card">
     <h3> 1. What type of car do you wish to buy? </h3>
-        <input type="radio" id="Sedan" name="type" value="Sedan">
+        <input type="radio" id="type" name="Sedan" value="Sedan">
         <label for="Sedan">Sedan</label><br>
-        <input type="radio" id="SUV" name="type" value="SUV">
+        <input type="radio" id="type" name="SUV" value="SUV">
         <label for="SUV">SUV</label><br>
-        <input type="radio" id="Pickup Truck" name="type" value="Pickup Truck">
-        <label for="Pickup Truck">Pickup Truck</label><br>
-        <input type="radio" id="Sports Car" name="type" value="Sports Car">
+        <input type="radio" id="type" name="Pickup Truck" value="Pickup Truck">
+        <label for="type">Pickup Truck</label><br>
+        <input type="radio" id="type" name="Sports Car" value="Sports Car">
         <label for="Sports Car">Sports Car</label><br>
-        <input type="radio" id="Van" name="type" value="Van">
+        <input type="radio" id="type" name="Van" value="Van">
         <label for="Van">Van</label><br>
-        <input type="radio" id="Convertible" name="type" value="Convertible">
+        <input type="radio" id="type" name="Convertible" value="Convertible">
         <label for="Convertible">Convertible</label><br>
-        <input type="radio" id="Coupe" name="type" value="Coupe">
+        <input type="radio" id="type" name="Coupe" value="Coupe">
         <label for="Coupe">Coupe</label><br>
     <h3> 2. How many people should your car be able to seat?</h3>
         <input type="radio" id="5" name="seatingCapacity" value="5">
