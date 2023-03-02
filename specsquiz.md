@@ -21,15 +21,15 @@
         <input type="radio" id="type" name="Coupe" value="Coupe">
         <label for="Coupe">Coupe</label><br>
     <h3> 2. How many people should your car be able to seat?</h3>
-        <input type="radio" id="5" name="seatingCapacity" value="5">
+        <input type="radio" id="seatingCapacity" name="5" value="5">
         <label for="5">5</label><br>
-        <input type="radio" id="7" name="seatingCapacity" value="7">
+        <input type="radio" id="seatingCapacity" name="7" value="7">
         <label for="7">7</label><br>
-        <input type="radio" id="8" name="seatingCapacity" value="8">
+        <input type="radio" id="seatingCapacity" name="8" value="8">
         <label for="8">8</label><br>
-        <input type="radio" id="10" name="seatingCapacity" value="10">
+        <input type="radio" id="seatingCapacity" name="10" value="10">
         <label for="10">10</label><br>
-        <input type="radio" id="15" name="seatingCapacity" value="15">
+        <input type="radio" id="seatingCapacity" name="15" value="15">
         <label for="15">15</label><br>
     <h3> 3. What power source do you prefer?</h3>
         <input type="radio" id="Gasoline" name="powerSource" value="Gasoline">
