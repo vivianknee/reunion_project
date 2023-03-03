@@ -79,6 +79,7 @@
                 fetch('https://finalssvgcars.duckdns.org/api/carspecs', read_options)
                     .then(response => response.json())
                     .then(data => createTable(data));
+                    console.log(data);
                 //  $(".table").remove();*/
                //  createTable(data);
                return false;
