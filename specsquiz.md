@@ -21,45 +21,45 @@
         <input type="radio" id="type" name="Coupe" value="Coupe">
         <label for="Coupe">Coupe</label><br>
     <h3> 2. How many people should your car be able to seat?</h3>
-        <input type="radio" id="5" name="seatingCapacity" value="5">
+        <input type="radio" id="seatingCapacity" name="5" value="5">
         <label for="5">5</label><br>
-        <input type="radio" id="7" name="seatingCapacity" value="7">
+        <input type="radio" id="seatingCapacity" name="7" value="7">
         <label for="7">7</label><br>
-        <input type="radio" id="8" name="seatingCapacity" value="8">
+        <input type="radio" id="seatingCapacity" name="8" value="8">
         <label for="8">8</label><br>
-        <input type="radio" id="10" name="seatingCapacity" value="10">
+        <input type="radio" id="seatingCapacity" name="10" value="10">
         <label for="10">10</label><br>
-        <input type="radio" id="15" name="seatingCapacity" value="15">
+        <input type="radio" id="seatingCapacity" name="15" value="15">
         <label for="15">15</label><br>
     <h3> 3. What power source do you prefer?</h3>
-        <input type="radio" id="Gasoline" name="powerSource" value="Gasoline">
+        <input type="radio" id="powerSource" name="Gasoline" value="Gasoline">
         <label for="Gasoline">Gasoline</label><br>
-        <input type="radio" id="Electric" name="powerSource" value="Electric">
+        <input type="radio" id="powerSource" name="Electric" value="Electric">
         <label for="Electric">Electric</label><br>
     <h3> 4. Transmission Type?</h3>
-        <input type="radio" id="Automatic" name="transmission" value="Automatic">
+        <input type="radio" id="transmission" name="Automatic" value="Automatic">
         <label for="Automatic">Automatic</label><br>
-        <input type="radio" id="Manual" name="transmission" value="Manual">
+        <input type="radio" id="transmission" name="Manual" value="Manual">
         <label for="Manual">Manual</label><br>
     <h3> 5. Desired Mileage (in miles per gallon)</h3>
-        <input type="radio" id="Non-Gasoline" name="mileage" value="Non-Gasoline">
+        <input type="radio" id="mileage" name="Non-Gasoline" value="Non-Gasoline">
         <label for="Non-Gasoline">Non-Gasoline (select if you want an electric car)</label><br>
-        <input type="radio" id="a" name="mileage" value="a">
+        <input type="radio" id="mileage" name="a" value="a">
         <label for="a">10-20 MPG</label><br>
-        <input type="radio" id="b" name="mileage" value="b">
+        <input type="radio" id="mileage" name="b" value="b">
         <label for="b">21-30 MPG</label><br>
-        <input type="radio" id="c" name="mileage" value="c">
+        <input type="radio" id="mileage" name="c" value="c">
         <label for="c">31-40 MPG</label><br>
     <h3> 6. Desired Range (in miles per charge)</h3>
-        <input type="radio" id="Non-Electric" name="range" value="Non-Electric">
+        <input type="radio" id="range" name="Non-Electric" value="Non-Electric">
         <label for="Non-Electric">Non-Electric (select if you want a gasoline car)</label><br>
-        <input type="radio" id="1" name="range" value="1">
+        <input type="radio" id="range" name="1" value="1">
         <label for="1">200-250 Miles</label><br>
-        <input type="radio" id="2" name="range" value="2">
+        <input type="radio" id="range" name="2" value="2">
         <label for="2">251-300 Miles</label><br>
-        <input type="radio" id="3" name="range" value="3">
+        <input type="radio" id="range" name="3" value="3">
         <label for="3">301-350 Miles</label><br>
-        <input type="radio" id="4" name="range" value="4">
+        <input type="radio" id="range" name="4" value="4">
         <label for="4">351-400 Miles</label><br>
         <input id="submit" type="submit" value="Find Cars" onclick="showTable(); return false;">
     <h3>
