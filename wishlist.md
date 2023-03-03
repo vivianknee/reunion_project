@@ -1,106 +1,16 @@
-<html lang="en-US">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>SSVG Cars Project | Create Performance Task</title>
-<meta name="generator" content="Jekyll v3.9.3" />
-<meta property="og:title" content="SSVG Cars Project" />
-<meta property="og:locale" content="en_US" />
-<meta name="description" content="Create Performance Task" />
-<meta property="og:description" content="Create Performance Task" />
-<link rel="canonical" href="https://vivianknee.github.io/reunion_project/wishlist.html" />
-<meta property="og:url" content="https://vivianknee.github.io/reunion_project/wishlist.html" />
-<meta property="og:site_name" content="SSVG Cars Project" />
-<meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="SSVG Cars Project" />
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"Create Performance Task","headline":"SSVG Cars Project","url":"https://vivianknee.github.io/reunion_project/wishlist.html"}</script>
-<!-- End Jekyll SEO tag -->
-
-    <link rel="stylesheet" href="/reunion_project/assets/css/style.css?v=abf67f294fbb08f89d14f52a840be56107174b98">
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-    <script src="/reunion_project/assets/js/respond.js"></script>
-   
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-  
-  </head>
-  <body>
-      
-    <div class="wrapper">
-
-      <section>
-        <!-- nighthawk coding society has altered arrangement and inserted navigation that is updated in independent file -->
-        <div id="title">
-          <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-  
-    @import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
-    
-    .menu {
-        overflow: visible;
-        background-color: black;
-        border: none;
-        position: fixed;
-        left: 0; 
-        right: 0;
-        top: 0;
-        width: 100%;
+  <p class="menu">
+    <style>
+	@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+    .title {
         font-family: "Kanit", sans-serif;
-        font-size: 20px;
-        z-index: 999;
-        padding: 0px;
-    }
-
-    .menu:hover {
-        color:white;
-    }
-  
-    .nav {
-        display: block;
-        color: rgb(249, 238, 238);
-        text-align: center;
-        padding: 40px 16px;
-        font-family: "Kanit", sans-serif;
-        font-size: 20px;
-    }
-
-    .nav:hover {
-        background-color: rgb(7, 7, 57);
-    }
-
+        font-size: 25px;
+        color: white;
+        display: grid;
+		justify-content: center;
+    } 
 </style>
-
-<body>
-<form onsubmit="create_User()" id="signup">
-    <h3><label class="title">Sign Up</label></h3>
-    
-    <p><label class="sign-up-label">
-        Username:
-        <input type="text" name="username" id="username" required>
-    </label></p>
-    <p><label class="sign-up-label">
-        Password:
-        <input type="password" name="password" id="password" required>
-    </label></p>
-    <p><label class="sign-up-label">
-        Verify Password:
-        <input type="password" name="passwordV" id="passwordV" required>
-    </label></p>
-    <p><label class="sign-up-label">
-        Email:
-        <input type="email" name="email" id="email" required>
-    </label></p>
-    <br><br>
-    <p>
-        <button class="createbutton">Create</button>
-        <p class="account">Already have an account? <a action="javascript:" onclick="openLog()">Log In</a></p>
-    </p>
-    <button type="button" class="cancel" onclick="closeSign()">x</button>
-</form>
-</body>
 
 <script>
     function openSign() {
@@ -168,98 +78,6 @@
         })
     }
 </script>  
-    <style>
-	@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
-    .title {
-        font-family: "Kanit", sans-serif;
-        font-size: 25px;
-        color: white;
-        display: grid;
-		justify-content: center;
-    }
-
-    #login {
-        display: none;
-        color: white;
-        width: 40%;
-        height: 50%;
-        padding: 50px;
-        padding-top: 30px;
-        background-color: rgb(16, 15, 15);
-        position: fixed;
-        left: 50%;
-        top: 7%;
-        transform: translate(-50%, 25%);
-        border: 5px solid white;
-        border-radius: 8px;
-        z-index: 9;
-    }
-    .log-in-label {
-        color: white;
-        font-family: "Kanit", sans-serif;
-        font-size: 20px;
-        display: grid;
-		justify-content: center;
-        
-    }
-    .cancel {
-        background-color: white;
-        position: fixed;
-        top: 15px;
-        right: 20px;
-        border: none;
-        font-weight: bold;
-    }
-
-    .cancel:hover {
-        color:rgb(4, 4, 43);
-    }
-
-    .createbutton {
-        background-color: white;
-        border-radius: 8px;
-        color: black;
-        border: none;
-        margin: 0;
-        position: absolute;
-        left: 50%;
-     	transform: translate(-50%, -50%);
-        font-family: "Kanit", sans-serif;
-        font-size: 20px;
-
-    }
-
-    .createbutton:hover {
-        color: rgb(4, 4, 43);
-    }
-    
-    .account {
-        font-family: "Kanit", sans-serif;
-        font-size: 15px;
-        color: white;
-    }
-</style>
-
-<body>
-<form onsubmit="create_User()" id="login">
-    <h3><label class="title">Login</label></h3>
-    
-    <p><label class="log-in-label">
-        Email:
-        <input type="email" name="email" id="email" required>
-    </label></p>
-    <p><label class="log-in-label">
-        Password:
-        <input type="password" name="password" id="password" required>
-    </label></p>
-    <br><br>
-    <p>
-        <button class="createbutton">Login</button>
-        <p class="account">Don't have an account? <a action="javascript:" onclick="openSign()">Sign Up</a></p>
-    </p>
-    <button type="button" class="cancel" onclick="closeLog()">x</button>
-</form>
-</body>
 
 <script>
     function openLog() {
@@ -326,28 +144,6 @@
         })
     }
 </script>     
-     <table class="menu">
-            <tr>
-                <td><a href="."><img src="/reunion_project/images/logo.png" width="120px"></a></td> 
-                <td><a href="/reunion_project/home" class="nav">Home</a></td>
-                <td><a href="/reunion_project/filtertool" class="nav">Car Filter Tool</a></td>
-                <td><a href="/reunion_project/specsquiz" class="nav">Specs Quiz</a></td>
-                <td><a href="/reunion_project/wishlist" class="nav">Wishlist</a></td>
-                <td><a href="/reunion_project/notm" class="nav">Reviews</a></td>
-                <td><a action="javascript:" onclick="openSign()" class="nav">Sign-Up/Log-In</a></td>
-            </tr>
-    </table>
-</p>
-
-
-          <!-- <h1><a href=https://github.com/vivianknee/reunion_project>SSVG Cars Project</a></h1> -->
-          <!-- <p>Create Performance Task</p> -->
-          <br>
-        </div>
-
-        <!-- this is Jekyll magic, each md file in site will be inserted here -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
 <html>
     <h1> Car Wish List </h1>
         <p>Choose your ideal car by using the pull-down menu provided below</p>
@@ -563,15 +359,19 @@
     const powersource_wish = document.getElementById("powersource");
     const pricerange_wish = document.getElementById("pricerange");
 
-    btnSelect.addEventListener('click', (event) => {
+    btnSelect.addEventListener'click', (event) => {
           console.log("Select Clicked!");
           clearTable();
           
-          if( brand_wish.value == "None" && color_wish.value == "None" && type_wish.value== "None" && powersource_wish.value == "None" && pricerange_wish.value == "None"){
-            alert('Select at least one option')
-            return
+          if( brand_wish.value === "None" && 
+          color_wish.value === "None" && 
+          type_wish.value === "None" && 
+          powersource_wish.value === "None" && 
+          pricerange_wish.value === "None") {
           }
-
+            alert('Select at least one option');
+            return}
+    
           var car_brand_value = brand_wish.value;
           var car_color_value = color_wish.value; 
           var car_type_value = type_wish.value; 
@@ -579,8 +379,6 @@
           var car_pricerange_value = pricerange_wish.value; 
 
           var car_wish_list = addToWishList(car_brand_value, car_color_value, car_type_value, car_powersource_value, car_pricerange_value);
-            return
-          }
 
           console.log(car_wish_list);
           console.log("Creating table!");
@@ -615,7 +413,7 @@
 
             resultContainer.appendChild(tr);
           }
-    });
+    }
 
     function clearTable() {
         var tableRows = resultContainer.getElementsByTagName('tr');
@@ -626,6 +424,17 @@
         }
     }
     
+    function getAllCars() {
+        fetch('https://finalssvgcars.duckdns.org/api/cars/').then(function(response) {
+                return response.json();
+            }).then(function(data) {
+                console.log(data);
+                all_cars = data;
+            }).catch(function(err) {
+                console.log(err);
+            });
+
+    }
 
     function addToWishList(brand, color, type, powersource, pricerange) {
         var result = [];
@@ -644,9 +453,5 @@
     }
 
   </script>
-
-      </section>
-
-    </div>
   </body>
 </html>
