@@ -51,7 +51,7 @@
                 //Rest of the code
             }
             function search_car() {
-                let input = document.getElementById('type').value
+                let input = document.getElementById('submit').value
                 console.log("input taken");
                 input = input.toLowerCase();
                 let x = document.getElementsByClassName('carspecs');
@@ -67,12 +67,18 @@
 
             function showTable() {
                 alert("fetching");
+                const read_options = {
+                    method: 'GET', // *GET, POST, PUT, DELETE, etc.
+                    mode: 'cors', // no-cors, *cors, same-origin
+                    cache: 'default', // *default, no-cache, reload, force-cache, only-if-cached
+                    credentials: 'omit', // include, *same-origin, omit
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
                 };
-                
                 fetch('https://finalssvgcars.duckdns.org/api/carspecs', read_options)
                     .then(response => response.json())
                     .then(data => createTable(data));
-                    console.log(data);
                 //  $(".table").remove();*/
                //  createTable(data);
                return false;
@@ -105,37 +111,12 @@
                                       <th width=200></th>
                                     </tr>`;
                 var tr = "";
-                var sed = document.getElementById("type").value;
-                var suv = document.getElementById("type1").value;
-                var tru = document.getElementById("type2").value;
-                var spo = document.getElementById("type3").value;
-                var van = document.getElementById("type4").value;
-                var con = document.getElementById("type5").value;
-                var cou = document.getElementById("type6").value;
-
-                var five = document.getElementById("seatingCapacity").value;
-                var seven = document.getElementById("seatingCapacity1").value;
-                var eight = document.getElementById("seatingCapacity2").value;
-                var ten = document.getElementById("seatingCapacity3").value;
-                var fifteen = document.getElementById("seatingCapacity4").value;
-
-                var gas = document.getElementById("powerSource").value;
-                var elec = document.getElementById("powerSource1").value;
-
-                var auto = document.getElementById("transmission").value;
-                var man = document.getElementById("transmission1").value;
-
-                var a = document.getElementById("mileage").value;
-                var b = document.getElementById("mileage1").value;
-                var c = document.getElementById("mileage2").value;
-                var d = document.getElementById("mileage3").value;
-
-                var e = document.getElementById("range").value;
-                var f = document.getElementById("range1").value;
-                var g = document.getElementById("range2").value;
-                var h = document.getElementById("range3").value;
-                var i = document.getElementById("range4").value;
-
+                var b = document.getElementById("type").value;
+                var c = document.getElementById("seatingCapacity").value;
+                var d = document.getElementById("powerSource").value;
+                var e = document.getElementById("transmission").value;
+                var f = document.getElementById("mileage").value;
+                var g = document.getElementById("range").value;
                 // alert(data[0].cuisine);
                 
                 for (let i = 0; i < data.length; i++) {
@@ -153,38 +134,13 @@
                 }
                 table += tr + "</table>";
                 document.getElementById("table") ?? {innerHTML: ''};
-                table.innerHTML += table;
-                document.getElementById("range4").value = i;
-                document.getElementById("range3").value = h;
-                document.getElementById("range2").value = g;
-                document.getElementById("range1").value = f;
-                document.getElementById("range").value = e;
-                
-                document.getElementById("mileage3").value = d;
-                document.getElementById("mileage2").value = c;
-                document.getElementById("mileage1").value = b;
-                document.getElementById("mileage").value = a;
-
-                document.getElementById("transmission1").value = man;
-                document.getElementById("transmission").value = auto;
-
-                document.getElementById("powerSource1").value = elec;
-                document.getElementById("powerSource").value = gas;
-
-                document.getElementById("seatingCapacity4").value = fifteen;
-                document.getElementById("seatingCapacity3").value = ten;
-                document.getElementById("seatingCapacity2").value = eight;
-                document.getElementById("seatingCapacity1").value = seven;
-                document.getElementById("seatingCapacity").value = five;
-
-                document.getElementById("type6").value = cou;
-                document.getElementById("type5").value = con;
-                document.getElementById("type4").value = van;
-                document.getElementById("type3").value = spo;
-                document.getElementById("type2").value = tru;
-                document.getElementById("type1").value = suv;
-                document.getElementById("type").value = sed;
-                
+                table.innerHTML += table;             
+                document.getElementById("range").value = g;
+                document.getElementById("mileage").value = f;
+                document.getElementById("transmission").value = e;
+                document.getElementById("powerSource").value = d;
+                document.getElementById("seatingCapacity").value = c;
+                document.getElementById("type").value = b;
                 alert("done");
             }
 
@@ -208,58 +164,58 @@
     <h3> 1. What type of car do you wish to buy? </h3>
         <input type="radio" id="type" name="Sedan" value="Sedan">
         <label for="Sedan">Sedan</label><br>
-        <input type="radio" id="type1" name="SUV" value="SUV">
+        <input type="radio" id="type" name="SUV" value="SUV">
         <label for="SUV">SUV</label><br>
-        <input type="radio" id="type2" name="Pickup Truck" value="Pickup Truck">
+        <input type="radio" id="type" name="Pickup Truck" value="Pickup Truck">
         <label for="type">Pickup Truck</label><br>
-        <input type="radio" id="type3" name="Sports Car" value="Sports Car">
+        <input type="radio" id="type" name="Sports Car" value="Sports Car">
         <label for="Sports Car">Sports Car</label><br>
-        <input type="radio" id="type4" name="Van" value="Van">
+        <input type="radio" id="type" name="Van" value="Van">
         <label for="Van">Van</label><br>
-        <input type="radio" id="type5" name="Convertible" value="Convertible">
+        <input type="radio" id="type" name="Convertible" value="Convertible">
         <label for="Convertible">Convertible</label><br>
-        <input type="radio" id="type6" name="Coupe" value="Coupe">
+        <input type="radio" id="type" name="Coupe" value="Coupe">
         <label for="Coupe">Coupe</label><br>
     <h3> 2. How many people should your car be able to seat?</h3>
         <input type="radio" id="seatingCapacity" name="5" value="5">
         <label for="5">5</label><br>
-        <input type="radio" id="seatingCapacity1" name="7" value="7">
+        <input type="radio" id="seatingCapacity" name="7" value="7">
         <label for="7">7</label><br>
-        <input type="radio" id="seatingCapacity2" name="8" value="8">
+        <input type="radio" id="seatingCapacity" name="8" value="8">
         <label for="8">8</label><br>
-        <input type="radio" id="seatingCapacity3" name="10" value="10">
+        <input type="radio" id="seatingCapacity" name="10" value="10">
         <label for="10">10</label><br>
-        <input type="radio" id="seatingCapacity4" name="15" value="15">
+        <input type="radio" id="seatingCapacity" name="15" value="15">
         <label for="15">15</label><br>
     <h3> 3. What power source do you prefer?</h3>
         <input type="radio" id="powerSource" name="Gasoline" value="Gasoline">
         <label for="Gasoline">Gasoline</label><br>
-        <input type="radio" id="powerSource1" name="Electric" value="Electric">
+        <input type="radio" id="powerSource" name="Electric" value="Electric">
         <label for="Electric">Electric</label><br>
     <h3> 4. Transmission Type?</h3>
         <input type="radio" id="transmission" name="Automatic" value="Automatic">
         <label for="Automatic">Automatic</label><br>
-        <input type="radio" id="transmission1" name="Manual" value="Manual">
+        <input type="radio" id="transmission" name="Manual" value="Manual">
         <label for="Manual">Manual</label><br>
     <h3> 5. Desired Mileage (in miles per gallon)</h3>
         <input type="radio" id="mileage" name="Non-Gasoline" value="Non-Gasoline">
         <label for="Non-Gasoline">Non-Gasoline (select if you want an electric car)</label><br>
-        <input type="radio" id="mileage1" name="a" value="a">
+        <input type="radio" id="mileage" name="a" value="a">
         <label for="a">10-20 MPG</label><br>
-        <input type="radio" id="mileage2" name="b" value="b">
+        <input type="radio" id="mileage" name="b" value="b">
         <label for="b">21-30 MPG</label><br>
-        <input type="radio" id="mileage3" name="c" value="c">
+        <input type="radio" id="mileage" name="c" value="c">
         <label for="c">31-40 MPG</label><br>
     <h3> 6. Desired Range (in miles per charge)</h3>
         <input type="radio" id="range" name="Non-Electric" value="Non-Electric">
         <label for="Non-Electric">Non-Electric (select if you want a gasoline car)</label><br>
-        <input type="radio" id="range1" name="1" value="1">
+        <input type="radio" id="range" name="1" value="1">
         <label for="1">200-250 Miles</label><br>
-        <input type="radio" id="range2" name="2" value="2">
+        <input type="radio" id="range" name="2" value="2">
         <label for="2">251-300 Miles</label><br>
-        <input type="radio" id="range3" name="3" value="3">
+        <input type="radio" id="range" name="3" value="3">
         <label for="3">301-350 Miles</label><br>
-        <input type="radio" id="range4" name="4" value="4">
+        <input type="radio" id="range" name="4" value="4">
         <label for="4">351-400 Miles</label><br>
         <input id="submit" type="submit" value="Find Cars" onclick="showTable(); return false;">
     <h3>
