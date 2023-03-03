@@ -3,6 +3,162 @@
 <p>Search for your dream car using specifications!</p>
 <p>Answer these questions with the specifications you want for your dream car! This will help the program narrow down the cars that are a best fit for you!</p>
 
+
+<style>
+    #submit {
+        background-color: white;
+        border-radius: 8px;
+        color: black;
+        border: none;
+        margin: 0;
+        font-family: "Kanit", sans-serif;
+        font-size: 20px;
+    }
+
+    .testbutton:hover {
+        color: rgb(4, 4, 43);
+    }
+
+    label {
+        font-family: "Kanit", sans-serif;
+        font-size: 18px;
+        color: white;
+    }
+
+    h3 {
+        font-family: "Kanit", sans-serif;
+        font-size: 20px;
+        color: white;
+    }
+
+    h1 {
+        font-family: "Kanit", sans-serif;
+        font-size: 30px;
+        color: white;
+    }
+
+    p {
+        font-family: "Kanit", sans-serif;
+        font-size: 15px;
+        color: white;
+    }
+</style>
+
+
+<script>
+            function validate(event) {
+                event.preventDefault();
+                //Rest of the code
+            }
+            function search_car() {
+                let input = document.getElementById('submit').value
+                console.log("input taken");
+                input = input.toLowerCase();
+                let x = document.getElementsByClassName('carspecs');
+                for (i = 0; i < x.length; i++) {
+                    if (!x[i].innerHTML.toLowerCase().includes(input)) {
+                        x[i].style.display = "none";
+                    }
+                    else {
+                        x[i].style.display = "list-item";
+                    }
+                }
+            }
+
+            function showTable() {
+                alert("fetching");
+                const read_options = {
+                    method: 'GET', // *GET, POST, PUT, DELETE, etc.
+                    mode: 'cors', // no-cors, *cors, same-origin
+                    cache: 'default', // *default, no-cache, reload, force-cache, only-if-cached
+                    credentials: 'omit', // include, *same-origin, omit
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                };
+                fetch('https://finalssvgcars.duckdns.org/api/carspecs', read_options)
+                    .then(response => response.json())
+                    .then(data => createTable(data));
+                //  $(".table").remove();*/
+               //  createTable(data);
+               return false;
+            }
+
+            function createTable(data)
+            {
+                alert("Getting data");
+                // $("#table").remove();
+                var table = $('<table>');
+                // "<table class='table' id='table' border=1 style='color:#fff !important; background-color:#d09c00 !important'>";
+                // add a row for name and marks
+                table += `<tr>
+                                      <th>Model Name</th>
+                                      <th>Type</th>
+                                      <th>Seating Capacity</th>
+                                      <th>Power Source</th>
+                                      <th>Transmission Type</th>
+                                      <th>Mileage</th>
+                                      <th>Range</th>
+                                    </tr>`;
+                // now add another row to show subject
+                table += `<tr>
+                                      <th width=200></th>
+                                      <th width=200></th>
+                                      <th width=200></th>
+                                      <th width=200></th>
+                                      <th width=200></th>
+                                      <th width=200></th>
+                                      <th width=200></th>
+                                    </tr>`;
+                var tr = "";
+                var b = document.getElementById("type").value;
+                var c = document.getElementById("seatingCapacity").value;
+                var d = document.getElementById("powerSource").value;
+                var e = document.getElementById("transmission").value;
+                var f = document.getElementById("mileage").value;
+                var g = document.getElementById("range").value;
+                // alert(data[0].cuisine);
+                
+                for (let i = 0; i < data.length; i++) {
+                    if (data[i].type.toLowerCase() == b.toLowerCase() && data[i].seatingCapacity.toLowerCase() == c.toLowerCase() && data[i].powerSource.toLowerCase() == d.toLowerCase() && data[i].transmission.toLowerCase() == e.toLowerCase() && data[i].mileage.toLowerCase() == f.toLowerCase() && data[i].range.toLowerCase() == g.toLowerCase()) {
+                        //alert(data[i].recipename);
+                        tr += "<tr>";
+                            tr += `<td>${data[i].type}</td>`;
+                            tr += `<td>${data[i].seatingCapacity}</td>`;
+                            tr += `<td>${data[i].powerSource}</td>`;
+                            tr += `<td>${data[i].transmission}</td>`;
+                            tr += `<td>${data[i].mileage}</td>`;
+                            tr += `<td>${data[i].range}</td>`;
+                        tr += "</tr>"
+                    }
+                }
+                table += tr + "</table>";
+                document.getElementById("table") ?? {innerHTML: ''};
+                table.innerHTML += table;             
+                document.getElementById("range").value = g;
+                document.getElementById("mileage").value = f;
+                document.getElementById("transmission").value = e;
+                document.getElementById("powerSource").value = d;
+                document.getElementById("seatingCapacity").value = c;
+                document.getElementById("type").value = b;
+                alert("done");
+            }
+
+            // function clearTable() {
+            //     var tableRows = resultContainer.getElementsByTagName('tr');
+            //     var rowCount = tableRows.length;
+
+            //     for (var x=rowCount-1; x>=0; x--) {
+            //         resultContainer.removeChild(tableRows[x]);
+            //     }
+            // }
+            
+            // function HideSuggestRecipe(){
+            //     var x = document.getElementById("submit");
+            //         x.style.display = "none";
+            // }
+</script>
+
 <html>
     <form onsubmit="validate(); return false;" class="w3-container w3-theme w3-card">
     <h3> 1. What type of car do you wish to buy? </h3>
@@ -63,147 +219,19 @@
         <label for="4">351-400 Miles</label><br>
         <input id="submit" type="submit" value="Find Cars" onclick="showTable(); return false;">
     <h3>
-</html>
-
-<style>
-    .testbutton {
-        background-color: white;
-        border-radius: 8px;
-        color: black;
-        border: none;
-        margin: 0;
-        font-family: "Kanit", sans-serif;
-        font-size: 20px;
-    }
-
-    .testbutton:hover {
-        color: rgb(4, 4, 43);
-    }
-
-    label {
-        font-family: "Kanit", sans-serif;
-        font-size: 18px;
-        color: white;
-    }
-
-    h3 {
-        font-family: "Kanit", sans-serif;
-        font-size: 20px;
-        color: white;
-    }
-
-    h1 {
-        font-family: "Kanit", sans-serif;
-        font-size: 30px;
-        color: white;
-    }
-
-    p {
-        font-family: "Kanit", sans-serif;
-        font-size: 15px;
-        color: white;
-    }
-</style>
-
-
-<script>
-            function validate(event) {
-                event.preventDefault();
-                //Rest of the code
-            }
-            function search_car() {
-                let input = document.getElementById('type').value
-                input = input.toLowerCase();
-                for (i = 0; i < x.length; i++) {
-                    if (!x[i].innerHTML.toLowerCase().includes(input)) {
-                        x[i].style.display = "none";
-                    }
-                    else {
-                        x[i].style.display = "list-item";
-                    }
-                }
-            }
-            function showTable() {
-                alert("fetching");
-                const read_options = {
-                    method: 'GET', // *GET, POST, PUT, DELETE, etc.
-                    mode: 'cors', // no-cors, *cors, same-origin
-                    cache: 'default', // *default, no-cache, reload, force-cache, only-if-cached
-                    credentials: 'omit', // include, *same-origin, omit
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                };
-                fetch('https://finalssvgcars.duckdns.org/api/carspecs', read_options)
-                    .then(response => response.json())
-                    .then(data => createTable(data));
-                //  $(".table").remove();*/
-               //  createTable(data);
-               return false;
-            }
-            function createTable(data)
-            {
-                alert("Getting data");
-                // $("#table").remove();
-                var table = "<table class='table' border=1 style='color:#fff !important; background-color:#d09c00 !important'>";
-                // add a row for name and marks
-                table += `<tr>
-                                      <th>Model Name</th>
-                                      <th>Type</th>
-                                      <th>Seating Capacity</th>
-                                      <th>Power Source</th>
-                                      <th>Transmission Type</th>
-                                      <th>Mileage</th>
-                                      <th>Range</th>
-                                    </tr>`;
-                // now add another row to show subject
-                table += `<tr>
-                                      <th width=200></th>
-                                      <th width=200></th>
-                                      <th width=200></th>
-                                      <th width=200></th>
-                                      <th width=200></th>
-                                      <th width=200></th>
-                                      <th width=200></th>
-                                    </tr>`;
-                var tr = "";
-                var b = document.getElementById("type").value;
-                var c = document.getElementById("seatingCapacity").value;
-                var d = document.getElementById("powerSource").value;
-                var e = document.getElementById("transmission").value;
-                var f = document.getElementById("mileage").value;
-                var g = document.getElementById("range").value;
-                // alert(data[0].cuisine);
-                for (let i = 0; i < data.length; i++) {
-                    if (data[i].type.toLowerCase() == b.toLowerCase() && data[i].seatingCapacity.toLowerCase() == c.toLowerCase() && data[i].powerSource.toLowerCase() == d.toLowerCase() && data[i].transmission.toLowerCase() == e.toLowerCase() && data[i].mileage.toLowerCase() == f.toLowerCase() && data[i].range.toLowerCase() == g.toLowerCase()) {
-                        //alert(data[i].recipename);
-                      tr += "<tr>";
-                        tr += `<td>${data[i].name}</td>`;
-                        tr += `<td>${data[i].type}</td>`;
-                        tr += `<td>${data[i].seatingCapacity}</td>`;
-                        tr += `<td>${data[i].powerSource}</td>`;
-                        tr += `<td>${data[i].transmission}</td>`;
-                        tr += `<td>${data[i].mileage}</td>`;
-                        tr += `<td>${data[i].range}</td>`;
-                        tr += "</tr>"
-                    }
-                }
-                table += tr + "</table>";
-                document.getElementById("table").innerHTML += table;
-                document.getElementById("range").value = g;
-                document.getElementById("mileage").value = f;
-                document.getElementById("transmission").value = e;
-                document.getElementById("powerSource").value = d;
-                document.getElementById("seatingCapacity").value = c;
-                document.getElementById("type").value = b;
-                alert("done");
-            }
-            function HideSuggestRecipe(){
-                var x = document.getElementById("submit");
-                    x.style.display = "none";
-            }
-            function UnhideData() {
-                var x = document.getElementById("submit");
-                x.style.display = "block";
-            }
-</script>
+        <br>
+        <table class="table-latitude" id="table">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Model Name</th>
+                <th>Seating Capacity</th> 
+                <th>Power Source</th>
+                <th>Transmission</th>
+                <th>Mileage</th>
+                <th>Range</th>
+            </tr>
+        </thead>
+        <tbody id="result">
+        </tbody>
+        </table>
