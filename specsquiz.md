@@ -51,7 +51,7 @@
                 //Rest of the code
             }
             function search_car() {
-                let input = document.getElementById('submit').value
+                let input = document.getElementById('type').value
                 console.log("input taken");
                 input = input.toLowerCase();
                 let x = document.getElementsByClassName('carspecs');
