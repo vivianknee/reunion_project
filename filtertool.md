@@ -26,7 +26,6 @@
             </tr>
           </table>
             <br>
-            <button class="searchbutton" id="search_button">Search</button>
             <div>
                 <br>
                 <div class="select">
@@ -109,6 +108,8 @@
                         </select>
                     </form>
                 </div>
+                <br>
+                <button class="searchbutton" id="search_button">Search</button>
                 <br>
                 <table class="table-latitude">
                 <thead>
