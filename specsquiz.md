@@ -67,14 +67,6 @@
 
             function showTable() {
                 alert("fetching");
-                const read_options = {
-                    method: 'GET', // *GET, POST, PUT, DELETE, etc.
-                    mode: 'cors', // no-cors, *cors, same-origin
-                    cache: 'default', // *default, no-cache, reload, force-cache, only-if-cached
-                    credentials: 'omit', // include, *same-origin, omit
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
                 };
                 fetch('https://finalssvgcars.duckdns.org/api/carspecs', read_options)
                     .then(response => response.json())
