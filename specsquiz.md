@@ -68,6 +68,7 @@
             function showTable() {
                 alert("fetching");
                 };
+                
                 fetch('https://finalssvgcars.duckdns.org/api/carspecs', read_options)
                     .then(response => response.json())
                     .then(data => createTable(data));
@@ -152,13 +153,38 @@
                 }
                 table += tr + "</table>";
                 document.getElementById("table") ?? {innerHTML: ''};
-                table.innerHTML += table;             
-                document.getElementById("range").value = g;
-                document.getElementById("mileage").value = f;
-                document.getElementById("transmission").value = e;
-                document.getElementById("powerSource").value = d;
-                document.getElementById("seatingCapacity").value = c;
-                document.getElementById("type").value = b;
+                table.innerHTML += table;
+                document.getElementById("range4").value = i;
+                document.getElementById("range3").value = h;
+                document.getElementById("range2").value = g;
+                document.getElementById("range1").value = f;
+                document.getElementById("range").value = e;
+                
+                document.getElementById("mileage3").value = d;
+                document.getElementById("mileage2").value = c;
+                document.getElementById("mileage1").value = b;
+                document.getElementById("mileage").value = a;
+
+                document.getElementById("transmission1").value = man;
+                document.getElementById("transmission").value = auto;
+
+                document.getElementById("powerSource1").value = elec;
+                document.getElementById("powerSource").value = gas;
+
+                document.getElementById("seatingCapacity4").value = fifteen;
+                document.getElementById("seatingCapacity3").value = ten;
+                document.getElementById("seatingCapacity2").value = eight;
+                document.getElementById("seatingCapacity1").value = seven;
+                document.getElementById("seatingCapacity").value = five;
+
+                document.getElementById("type6").value = cou;
+                document.getElementById("type5").value = con;
+                document.getElementById("type4").value = van;
+                document.getElementById("type3").value = spo;
+                document.getElementById("type2").value = tru;
+                document.getElementById("type1").value = suv;
+                document.getElementById("type").value = sed;
+                
                 alert("done");
             }
 
