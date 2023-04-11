@@ -332,7 +332,6 @@
               console.log("price range from data is:" + typeof car["pricerange"] + car["pricerange"])
               console.log("being compared to:" + typeof pricerange + pricerange)
 
-            
             if ((car["brand"] === brand || !brand) &&
                 (car["color"] === color || !color) &&
                 (car["type"] === type || !type) && 
@@ -340,7 +339,7 @@
                 (car["pricerange"] === parseInt(pricerange, 10) || !pricerange)) {
                 result.push(car);
             }
-            else:
+            else
                 if (car_list.length === 0) {
                     alert('No Cars Found')
                     return
