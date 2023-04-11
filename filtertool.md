@@ -254,10 +254,10 @@
 
           var car_list = getCarResults(car_brand_value, car_color_value, car_type_value, car_powersource_value, car_pricerange_value); //setting car_list to the result gotten in the function getCarResults
 
-          //if (car_list.length === 0) {
-          //  alert('No Cars Found')
-          //  return
-          //}
+          if (car_list.length === 0) {
+            alert('No Cars Found')
+            return
+          }
 
           console.log("Filtered cars retrieved!");
           console.log(car_list);
@@ -338,11 +338,6 @@
                 (car["powersource"] === powersource || !powersource) && 
                 (car["pricerange"] === parseInt(pricerange, 10) || !pricerange)) {
                 result.push(car);
-            }
-            else
-                if (result.length === 0) {
-                    alert('No Cars Found')
-                    return
             }
         }
 
