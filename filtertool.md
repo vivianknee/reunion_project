@@ -340,7 +340,7 @@
                 result.push(car);
             }
             else
-                if (car_list.length === 0) {
+                if (result.length === 0) {
                     alert('No Cars Found')
                     return
             }
