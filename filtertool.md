@@ -347,7 +347,6 @@
         }
 
         else {
-            document.getElementById("info").innerHTML = result.length + 'Cars Found';
             console.log(result.length + 'Cars Found');
         }
 
