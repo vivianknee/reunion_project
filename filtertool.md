@@ -24,6 +24,7 @@
                 <td>4</td>
                 <td>80k and up</td>
             </tr>
+          <p class="info"></p>
           </table>
             <br>
             <div>
@@ -344,7 +345,12 @@
         if (result.length === 0) {
             console.log('No Cars Found');
         }
-        
+
+        else {
+            document.getElementById("info").innerHTML = result.length + 'Cars Found';
+            console.log(result.length + 'Cars Found');
+        }
+
         return result;
     }
   </script>
