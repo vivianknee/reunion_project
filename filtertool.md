@@ -343,8 +343,8 @@
 
         if (result.length === 0) {
             console.log('No Cars Found');
-            return
         }
+        
         return result;
     }
   </script>
